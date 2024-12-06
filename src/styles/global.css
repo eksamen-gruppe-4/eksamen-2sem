@@ -1,0 +1,124 @@
+/**Katinka**/
+/**I global lægger vi ind alt der er fælles for at sikre lighed og en rød tråd i designet!**/
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/**Google Fonts variables (bæredygtigt), ligger lokalt i fonts mappe for at sikre hurtig load tid
+OBS Muligt vi ikke behøver alle!?**/
+@font-face {
+  font-family: "georama_extracondensed_thin";
+  src: url("georama-variablefont_wdthwght-webfont.woff2") format("woff2"),
+    url("georama-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "georama_italic";
+  src: url("georama-italic-variablefont_wdthwght-webfont.woff2") format("woff2"),
+    url("georama-italic-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neuton_extrabold";
+  src: url("neuton-extrabold-webfont.woff2") format("woff2"),
+    url("neuton-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neuton_bold";
+  src: url("neuton-bold-webfont.woff2") format("woff2"),
+    url("neuton-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neuton_regular";
+  src: url("neuton-regular-webfont.woff2") format("woff2"),
+    url("neuton-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neuton_light";
+  src: url("neuton-light-webfont.woff2") format("woff2"),
+    url("neuton-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neuton_extralight";
+  src: url("neuton-extralight-webfont.woff2") format("woff2"),
+    url("neuton-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neuton_italic";
+  src: url("neuton-italic-webfont.woff2") format("woff2"),
+    url("neuton-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**Variables**/
+html {
+  /**Fonts**/
+  --font1: "neuton_regular";
+  --font2: "georama_extracondensed_thin";
+  /**Colors**/
+  --primary: #fcf7f1; /**Baggrund**/
+  --secondary: #5e7153; /**Fonts**/
+  --tertiary: #fd6f2f; /**CTA**/
+  --quaternary: #ffd2bd; /**CTA på mørk baggrund**/
+  --quinary: #a9b489; /**Pop-up buble**/
+  /**Font size**/
+  --fontsize1: 18pt;
+  --fontsize2: 24pt;
+  --fontsize3: 36pt;
+  --fontsize4: 48pt;
+  --fontsize5: 54pt;
+  --fontsize6: 60pt;
+}
+/**Fælles stylede tags**/
+body {
+  background-color: var(--primary);
+}
+h1,
+h2 {
+  font-family: var(--font1);
+  color: var(--secondary);
+}
+p {
+  font-family: var(--font2);
+  color: var(--secondary);
+}
+
+/**Font sizes mobile**/
+h1 {
+  font-size: var(--fontsize5);
+}
+h2 {
+  font-size: var(--fontsize3);
+}
+p {
+  font-size: var(--fontsize1);
+  max-width: 65ch;
+}
+
+/**Font sizes desktop**/
+@media (min-width: 800px) {
+  h1 {
+    font-size: var(--fontsize6);
+  }
+  h2 {
+    font-size: var(--fontsize4);
+  }
+  p {
+    font-size: var(--fontsize2);
+  }
+}
