@@ -71,8 +71,8 @@ html {
   --font1: "neuton_regular";
   --font2: "georama_extracondensed_thin";
   /**Colors**/
-  --primary: #fcf7f1; /**Baggrund**/
-  --secondary: #5e7153; /**Fonts**/
+  --primary: #fcf7f1; /**Baggrund + font på mørk baggrund**/
+  --secondary: #5e7153; /**Fonts + baggrund på cards**/
   --tertiary: #fd6f2f; /**CTA**/
   --quaternary: #ffd2bd; /**CTA på mørk baggrund**/
   --quinary: #a9b489; /**Pop-up buble**/
@@ -100,10 +100,10 @@ p {
 
 /**Font sizes mobile**/
 h1 {
-  font-size: var(--fontsize5);
+  font-size: var(--fontsize3);
 }
 h2 {
-  font-size: var(--fontsize3);
+  font-size: var(--fontsize2);
 }
 p {
   font-size: var(--fontsize1);
@@ -113,10 +113,10 @@ p {
 /**Font sizes desktop**/
 @media (min-width: 800px) {
   h1 {
-    font-size: var(--fontsize6);
+    font-size: var(--fontsize5);
   }
   h2 {
-    font-size: var(--fontsize4);
+    font-size: var(--fontsize3);
   }
   p {
     font-size: var(--fontsize2);
