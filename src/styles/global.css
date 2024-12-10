@@ -20,7 +20,7 @@ OBS Muligt vi ikke behøver alle!?**/
   src: url("georama-italic-variablefont_wdthwght-webfont.woff2") format("woff2"),
     url("georama-italic-variablefont_wdthwght-webfont.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: "neuton_extrabold";
@@ -69,7 +69,8 @@ OBS Muligt vi ikke behøver alle!?**/
 html {
   /**Fonts**/
   --font1: "neuton_regular";
-  --font2: "georama_extracondensed_thin";
+  --font2: "georama_extracondensed_thin", sans-serif;
+  --fontcitat: "georama_italic", sans-serif; /*Bruges til citater*/
   /**Colors**/
   --primary: #fcf7f1; /**Baggrund + font på mørk baggrund**/
   --secondary: #5e7153; /**Fonts + baggrund på cards**/
@@ -77,48 +78,87 @@ html {
   --quaternary: #ffd2bd; /**CTA på mørk baggrund**/
   --quinary: #a9b489; /**Pop-up buble**/
   /**Font size**/
-  --fontsize1: 18pt;
-  --fontsize2: 24pt;
-  --fontsize3: 36pt;
-  --fontsize4: 48pt;
-  --fontsize5: 54pt;
-  --fontsize6: 60pt;
+  --fontsize1: 10pt;
+  --fontsize2: 12pt;
+  --fontsize3: 14pt;
+  --fontsize4: 18pt;
+  --fontsize5: 24pt;
+  --fontsize6: 36pt;
+  --fontsize7: 48pt;
+  --fontsize8: 54pt;
 }
 /**Fælles stylede tags**/
 body {
   background-color: var(--primary);
+  text-align: center;
 }
 h1,
 h2 {
   font-family: var(--font1);
   color: var(--secondary);
 }
-p {
+p,
+a {
   font-family: var(--font2);
   color: var(--secondary);
 }
-
+/*Fjerner linje under link*/
+a {
+  text-decoration: none;
+}
 /**Font sizes mobile**/
 h1 {
-  font-size: var(--fontsize3);
+  font-size: var(--fontsize4);
 }
 h2 {
-  font-size: var(--fontsize2);
+  font-size: var(--fontsize3);
 }
+a,
 p {
-  font-size: var(--fontsize1);
+  font-size: var(--fontsize2);
   max-width: 65ch;
 }
 
-/**Font sizes desktop**/
+footer p {
+  font-size: var(--fontsize1);
+}
+/**Margin & padding mobile. OBS header og footer styles i egen komponent**/
+main {
+  margin: 3rem;
+}
+/**Fonts desktop**/
 @media (min-width: 800px) {
+  body {
+    text-align: left;
+  }
   h1 {
-    font-size: var(--fontsize5);
+    font-size: var(--fontsize6);
   }
   h2 {
+    font-size: var(--fontsize5);
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+  a,
+  p {
     font-size: var(--fontsize3);
   }
-  p {
+
+  footer p {
     font-size: var(--fontsize2);
+  }
+  footer p {
+    line-height: 16pt;
+  }
+  /**Margin & padding desktop. OBS header og footer styles i egen komponent**/
+  main {
+    margin: 5rem;
+  }
+  section,
+  .kundeanmeldelser {
+    margin: 4rem;
+    padding: 4rem;
   }
 }
