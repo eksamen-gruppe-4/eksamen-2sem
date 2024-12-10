@@ -1,0 +1,65 @@
+---
+import SoMeIcons from "../components/SoMeIcons.astro";
+---
+<!--Katinka -->
+<!--HUSK MOBILE FIRST! -->
+<footer>
+<div class="so_me_icons">
+    <SoMeIcons/>
+</div>
+<div class="adresse">
+    <p>Hair Creations by Gaia<br>
+        Adresse:<br>
+        Ramsherred 23D<br>
+        4700 Næstved<br>
+        Tlf.: 33669900<br>
+        Email: gaia@gmail.com</p>
+</div>
+<div class="aabningstider">
+    <p>Åbningstider:<br>
+    Mine åbningstider varierer da jeg elsker den fleksibilitet det giver at vi sammen finder en tid der passer til dit behov.</p>
+</div>
+</footer>
+
+<style>
+footer {
+display: flex;
+flex-direction: column;
+border-top: 3px solid var(--secondary);
+padding-top: 2rem;
+padding-bottom: 2rem;
+text-align: center;
+align-items: center;
+gap: 30px;
+}
+div {
+    max-width: 25ch;
+}
+@media (min-width: 800px) {
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+/* padding: 31px 61px 0px 62px; hentet fra Figma dev mode*/
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    text-align: left;
+}
+.adresse {
+    grid-column: 1/2;
+    grid-row:1/2;
+    justify-self: center;
+}
+.so_me_icons {
+    grid-column: 2/3;
+    grid-row:1/2;
+    justify-self: center;
+}
+.aabningstider {
+    grid-column: 3/4;
+    grid-row:1/2;
+    justify-self: center;
+}
+}
+</style>
+
