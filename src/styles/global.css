@@ -9,58 +9,64 @@
 /**Google Fonts variables (bæredygtigt), ligger lokalt i fonts mappe for at sikre hurtig load tid
 OBS Muligt vi ikke behøver alle!?**/
 @font-face {
+  /*OBS MÆRKELIG FONT?? Finde ny*/
   font-family: "georama_extracondensed_thin";
-  src: url("georama-variablefont_wdthwght-webfont.woff2") format("woff2"),
-    url("georama-variablefont_wdthwght-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/georama-variablefont_wdthwght-webfont.woff2")
+      format("woff2"),
+    url("fonts/webfontkit/georama-variablefont_wdthwght-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
+  /*OBS MÆRKELIG FONT?? Finde ny*/
   font-family: "georama_italic";
-  src: url("georama-italic-variablefont_wdthwght-webfont.woff2") format("woff2"),
-    url("georama-italic-variablefont_wdthwght-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/georama-italic-variablefont_wdthwght-webfont.woff2")
+      format("woff2"),
+    url("fonts/webfontkit/georama-italic-variablefont_wdthwght-webfont.woff")
+      format("woff");
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
 }
 @font-face {
   font-family: "neuton_extrabold";
-  src: url("neuton-extrabold-webfont.woff2") format("woff2"),
-    url("neuton-extrabold-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/neuton-extrabold-webfont.woff2") format("woff2"),
+    url("fonts/webfontkit/neuton-extrabold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "neuton_bold";
-  src: url("neuton-bold-webfont.woff2") format("woff2"),
-    url("neuton-bold-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/neuton-bold-webfont.woff2") format("woff2"),
+    url("fonts/webfontkit/neuton-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "neuton_regular";
-  src: url("neuton-regular-webfont.woff2") format("woff2"),
-    url("neuton-regular-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/neuton-regular-webfont.woff2") format("woff2"),
+    url("fonts/webfontkit/neuton-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "neuton_light";
-  src: url("neuton-light-webfont.woff2") format("woff2"),
-    url("neuton-light-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/neuton-light-webfont.woff2") format("woff2"),
+    url("fonts/webfontkit/neuton-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "neuton_extralight";
-  src: url("neuton-extralight-webfont.woff2") format("woff2"),
-    url("neuton-extralight-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/neuton-extralight-webfont.woff2") format("woff2"),
+    url("fonts/webfontkit/neuton-extralight-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "neuton_italic";
-  src: url("neuton-italic-webfont.woff2") format("woff2"),
-    url("neuton-italic-webfont.woff") format("woff");
+  src: url("fonts/webfontkit/neuton-italic-webfont.woff2") format("woff2"),
+    url("fonts/webfontkit/neuton-italic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -69,8 +75,11 @@ OBS Muligt vi ikke behøver alle!?**/
 html {
   /**Fonts**/
   --font1: "neuton_regular";
-  --font2: "georama_extracondensed_thin", sans-serif;
-  --fontcitat: "georama_italic", sans-serif; /*Bruges til citater*/
+  /* --font2: "georama_extracondensed_thin"; */
+  /*--fontcitat: "georama_italic"; Bruges til citater*/
+  --font2: sans-serif;
+  --fontcitat: sans-serif; /*Indsæt italic font. Bruges til citater*/
+
   /**Colors**/
   --primary: #fcf7f1; /**Baggrund + font på mørk baggrund**/
   --secondary: #5e7153; /**Fonts + baggrund på cards**/
@@ -93,7 +102,8 @@ body {
   text-align: center;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--font1);
   color: var(--secondary);
 }
@@ -108,23 +118,33 @@ a {
 }
 /**Font sizes mobile**/
 h1 {
-  font-size: var(--fontsize4);
+  font-size: var(--fontsize5);
 }
 h2 {
+  font-size: var(--fontsize4);
+}
+h3 {
   font-size: var(--fontsize3);
 }
 a,
 p {
   font-size: var(--fontsize2);
   max-width: 65ch;
+  line-height: 14pt;
 }
 
 footer p {
   font-size: var(--fontsize1);
+  line-height: 12pt;
 }
 /**Margin & padding mobile. OBS header og footer styles i egen komponent**/
 main {
   margin: 3rem;
+}
+section,
+.kundeanmeldelser {
+  margin: 2rem;
+  padding: 2rem;
 }
 /**Fonts desktop**/
 @media (min-width: 800px) {
@@ -137,6 +157,9 @@ main {
   h2 {
     font-size: var(--fontsize5);
   }
+  h3 {
+    font-size: var(--fontsize4);
+  }
   h1,
   h2 {
     text-align: center;
@@ -144,14 +167,16 @@ main {
   a,
   p {
     font-size: var(--fontsize3);
-  }
-
-  footer p {
-    font-size: var(--fontsize2);
-  }
-  footer p {
     line-height: 16pt;
   }
+  p {
+    text-align: left;
+  }
+  footer p {
+    font-size: var(--fontsize2);
+    line-height: 14pt;
+  }
+
   /**Margin & padding desktop. OBS header og footer styles i egen komponent**/
   main {
     margin: 5rem;
