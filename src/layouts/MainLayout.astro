@@ -1,8 +1,10 @@
 ---
-import "../styles/global.css"
+import "../styles/global.css";
+import Header from "../layouts/Header.astro";
+import Footer from "../layouts/Footer.astro";
 ---
-<!--Katinka -->
-<!DOCTYPE html>
+
+<!--Katinka --><!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,6 +16,8 @@ import "../styles/global.css"
     <title>Hair Creations by Gaia</title>
   </head>
   <body>
-    <slot/>
-</body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
