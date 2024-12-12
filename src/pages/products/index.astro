@@ -4,7 +4,7 @@ import Button from "../../components/Button.astro";
 import Card_product from "../../components/Card_product.astro";
 
 const products = await fetch(
-  "https://eiritvqzdghcofdqqljs.supabase.co/rest/v1/Artist",
+  "https://eiritvqzdghcofdqqljs.supabase.co/rest/v1/products",
   {
     method: "GET",
     headers: {
@@ -17,5 +17,13 @@ const products = await fetch(
 
 <!-- Matilde -->
 <MainLayout>
-  <main></main>
+  <main>
+    <ul>
+      {
+        products.map((product) => {
+          return <Card_product product={product} />;
+        })
+      }
+    </ul>
+  </main>
 </MainLayout>
