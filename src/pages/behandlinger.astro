@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../layouts/Header.astro";
+import Formular from "../components/Formular.astro";
 import Footer from "../layouts/Footer.astro";
 ---
 <!--Skal behandlingsoversigten være statisk eller dynamisk? -->
@@ -95,6 +96,7 @@ import Footer from "../layouts/Footer.astro";
 <p>100,-</p>
 </div>
 </section>
+<Formular/>
 </main>
 <Footer/>
 </MainLayout>
@@ -132,6 +134,10 @@ img {
 }
 p {
     padding-bottom: 1.7rem;
+}
+div {
+    padding-right: 1.5rem;
+    padding-left:1.5rem;
 }
 }
 

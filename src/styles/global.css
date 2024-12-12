@@ -141,11 +141,24 @@ footer p {
 main {
   margin: 3rem;
 }
-section,
-.kundeanmeldelser {
+section {
   margin: 2rem;
   padding: 2rem;
 }
+.kundeanmeldelser {
+  padding: 2rem;
+}
+h1 {
+  padding-bottom: 2rem;
+}
+h2 {
+  padding-bottom: 1rem;
+}
+.button_orange,
+.button_green {
+  padding-top: 2rem;
+}
+
 /**Fonts desktop**/
 @media (min-width: 800px) {
   body {
