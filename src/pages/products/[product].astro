@@ -1,1 +1,30 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button from "../../components/Button.astro";
+
+export async function getStaticPaths() {
+  const products = await fetch(
+    "https://eiritvqzdghcofdqqljs.supabase.co/rest/v1/Artist",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpcml0dnF6ZGdoY29mZHFxbGpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzMxNTEwMTgsImV4cCI6MjA0ODcyNzAxOH0.YUeY669t8fomqyHGhIGwyU-PBt5SvU9tv3CCcmlHUJQ",
+      },
+    }
+  ).then((res) => res.json());
+
+  return products.map((product) => ({
+    params: { product: product.slug }, // [product]=product.slug
+    props: { myData: product }, // send al data med som props
+  }));
+}
+
+const { myData } = Astro.props;
+console.log(myData); // product.name, product.image osv.
+---
+
 <!-- Matilde -->
+<MainLayout>
+  <main></main>
+</MainLayout>

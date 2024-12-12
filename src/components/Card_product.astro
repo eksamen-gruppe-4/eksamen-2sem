@@ -1,0 +1,26 @@
+---
+const { product } = Astro.props;
+---
+
+<!-- Matilde -->
+<div class="card">
+  <img src={product.img} alt="Billede af produkt" />
+  <div class="info">
+    <p>{product.product_name}</p>
+    <a href={"/products/" + product.slug}>Læs mere</a>
+  </div>
+</div>
+
+<style>
+  .card {
+    border-radius: 30px;
+  }
+
+  .info {
+    background-color: var(--secondary);
+  }
+
+  a {
+    color: var(--quaternary);
+  }
+</style>
