@@ -10,6 +10,15 @@ import SoMeIcons from "../components/SoMeIcons.astro";
 <MainLayout>
   <Header/>
   <main>
+<div class="hero_section" >
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <dotlottie-player src="https://lottie.host/a3e2418c-0beb-460a-aa87-2f549c3663bf/8F7Bt97hQQ.lottie" background="transparent" speed="1" style="width: 1800px; height: 600px;" loop autoplay>
+    <a href="#bestil_tid">
+    </dotlottie-player>
+    <div class="book">
+    <Button class="button_orange" buttontext="Bestil tid"/></a>
+  </div>
+</div>
     <!--Insert HeroSection -->
     <h1>BEHANDLINGER OG PRISER</h1>
     <!--Insert CardSection -->
@@ -79,9 +88,21 @@ border-radius: 30px;
   .citat {
     font-family: var(--fontcitat);
   }
+  .hero_section {
+  display: flex;
+  justify-self: center;
+  position: relative;
+  width: 100%;
+  }
+  .book {
+  display: flex;
+  justify-self: center;
+  position: absolute;
+  bottom: 0;
+  }
 
   /*Styling desktop */
   @media (min-width: 800px) {
-  
+ 
   }
 </style>
