@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 /**Google Fonts variables (bæredygtigt), ligger lokalt i fonts mappe for at sikre hurtig load tid
-OBS Muligt vi ikke behøver alle!?**/
+OBS Muligt vi ikke behøver alle som er gemt i fonts folder...**/
 @font-face {
   font-family: "georama_regular";
   src: url("fonts/georama_regular/georama-regular-webfont.woff2")
@@ -32,35 +32,6 @@ OBS Muligt vi ikke behøver alle!?**/
   font-weight: normal;
   font-style: normal;
 }
-
-/* @font-face {
-  font-family: "neuton_bold";
-  src: url("fonts/webfontkit/neuton-bold-webfont.woff2") format("woff2"),
-    url("fonts/webfontkit/neuton-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "neuton_light";
-  src: url("fonts/webfontkit/neuton-light-webfont.woff2") format("woff2"),
-    url("fonts/webfontkit/neuton-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "neuton_extralight";
-  src: url("fonts/webfontkit/neuton-extralight-webfont.woff2") format("woff2"),
-    url("fonts/webfontkit/neuton-extralight-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "neuton_italic";
-  src: url("fonts/webfontkit/neuton-italic-webfont.woff2") format("woff2"),
-    url("fonts/webfontkit/neuton-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-} */
 
 /**Variables**/
 html {
