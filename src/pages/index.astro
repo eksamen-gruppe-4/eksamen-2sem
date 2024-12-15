@@ -26,8 +26,8 @@ import Card_behandling from "../components/Card_behandling.astro";
     <h1>BEHANDLINGER OG PRISER</h1>
     <!--Insert CardSection -->
     <section>
-      <h1>LÆS HVAD KUNDERNE SIGER</h1>
       <div class="kundeanmeldelser">
+        <h1>LÆS HVAD KUNDERNE SIGER</h1>
         <p class="citat">
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
           laudantium quisquam cupiditate itaque odio eum accusantium maiores a
@@ -103,6 +103,12 @@ import Card_behandling from "../components/Card_behandling.astro";
 </MainLayout>
 
 <style>
+main {
+  background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
+  width: 100%;
+  margin:0;
+  background-attachment: fixed;
+}
   /* OBS KODE HVIS VI ENDER MED LOTTIEFILE .lottie {
   display: flex;
   position: relative;
@@ -117,6 +123,7 @@ import Card_behandling from "../components/Card_behandling.astro";
    .hero_img {
     animation: zoomIn 10s infinite alternate;
     width: 100%;
+
    }
     /*Zoom-in animation*/
     @keyframes zoomIn {
@@ -141,6 +148,7 @@ import Card_behandling from "../components/Card_behandling.astro";
   #lokation, .kundeanmeldelser {
 border: 3px solid var(--secondary);
 border-radius: 30px;
+background-color: var(--primary);
   }
   .lokation img {
     width: 100%;
