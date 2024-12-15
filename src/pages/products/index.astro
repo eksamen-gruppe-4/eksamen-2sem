@@ -18,12 +18,27 @@ const products = await fetch(
 <!-- Matilde -->
 <MainLayout>
   <main>
-    <ul>
+    <h1>PRODUKTER</h1>
+    <p></p>
+    <Button class="button_green" buttontext="Alle" />
+    <Button class="button_green" buttontext="Shampoo" />
+    <Button class="button_green" buttontext="Conditioner" />
+    <Button class="button_green" buttontext="Styling & Varmebeskyttelse" />
+    <div>
       {
         products.map((product) => {
           return <Card_product product={product} />;
         })
       }
-    </ul>
+    </div>
   </main>
 </MainLayout>
+
+<style>
+  @media (min-width: 800px) {
+    div {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

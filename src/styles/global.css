@@ -139,7 +139,8 @@ footer p {
 }
 /**Margin & padding mobile. OBS header og footer styles i egen komponent**/
 main {
-  margin: 3rem;
+/*   margin: 3rem; */
+margin: 0 auto;
 }
 section {
   margin: 2rem;
@@ -192,7 +193,8 @@ h2 {
 
   /**Margin & padding desktop. OBS header og footer styles i egen komponent**/
   main {
-    margin: 5rem;
+   /*  margin: 5rem; */
+    max-width: 1200px;
   }
   section,
   .kundeanmeldelser {

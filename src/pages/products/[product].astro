@@ -1,10 +1,12 @@
 ---
+//@ts-nocheck
 import MainLayout from "../../layouts/MainLayout.astro";
 import Button from "../../components/Button.astro";
+//const { product } = Astro.props;
 
 export async function getStaticPaths() {
   const products = await fetch(
-    "https://eiritvqzdghcofdqqljs.supabase.co/rest/v1/Artist",
+    "https://eiritvqzdghcofdqqljs.supabase.co/rest/v1/products",
     {
       method: "GET",
       headers: {
@@ -13,6 +15,9 @@ export async function getStaticPaths() {
       },
     }
   ).then((res) => res.json());
+
+  // Log produkter for at kontrollere strukturen
+  console.log("Fetched products:", products);
 
   return products.map((product) => ({
     params: { product: product.slug }, // [product]=product.slug
@@ -26,5 +31,33 @@ console.log(myData); // product.name, product.image osv.
 
 <!-- Matilde -->
 <MainLayout>
-  <main></main>
+  <main>
+    <div class="product_container">
+      <div>
+        <img src={"/img/products/" + myData.img} alt="Produkt billede" />
+      </div>
+      <div>
+        <h1>{myData.product_name}</h1>
+        <div class="product_info">
+          <p>Information om produktet</p>
+          <p>{myData.info}</p>
+        </div>
+        <p>Pris: {myData.price}kr</p>
+        <p>Kan købes i salonen</p>
+      </div>
+    </div>
+  </main>
 </MainLayout>
+
+<style>
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 800px) {
+    .product_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

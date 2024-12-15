@@ -5,34 +5,52 @@ console.log("product", product);
 
 <!-- Matilde -->
 <div class="card">
-  <img src={"/img/products/" + product.img} alt="Billede af produkt" />
-  <div class="info">
-    <p>{product.product_name}</p>
-    <a href={"/products/" + product.slug}>Læs mere</a>
-  </div>
+  <a href={`/products/${product.slug}`}>
+    <img src={"/img/products/" + product.img} alt="Billede af produkt" />
+    <div class="info">
+      <p>{product.product_name}</p>
+      <a class="read-more" href={`/products/${product.slug}`}>Læs mere</a>
+    </div>
+  </a>
 </div>
 
 <style>
   .card {
-    width: 310px;
-    height: 554px;
-    flex-shrink: 0;
-    border-radius: 30px;
+    width: 240px;
+    margin: 2rem;
   }
 
   .info {
     background-color: var(--secondary);
+    margin-top: -6px;
+    padding: 1.5rem;
+    height: 160px;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    flex-direction: column;
   }
 
-  a {
+  .read-more {
     color: var(--quaternary);
+    text-decoration: underline;
+    margin-top: auto;
   }
 
   p {
     color: var(--primary);
+    margin-bottom: auto;
+    text-align: left;
   }
 
   img {
     width: 100%;
+    margin-bottom: 0;
+    border-radius: 30px 30px 0px 0px;
+  }
+
+  @media (min-width: 800px) {
+    .card:hover {
+      transform: scale(1.05);
+    }
   }
 </style>

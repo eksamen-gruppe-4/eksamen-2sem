@@ -3,36 +3,54 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../layouts/Header.astro";
 import Footer from "../layouts/Footer.astro";
 ---
+
 <!--Skal behandlingsoversigten være statisk eller dynamisk? -->
 <MainLayout>
-<Header/>
-<main>
-<h1>UNDERVISNING</h1>
-<section class="grid_1-1">
-<p class="right">Lorem ipsum dolor sit amet consectetur. Leo massa faucibus morbi integer leo. Diam porttitor diam blandit tortor mauris et cursus. Semper nisi a vitae velit velit eleifend. Id fringilla eget venenatis ut duis egestas. </p>
-<img src="" alt="billede">
-</section>
-<section class="grid_1-1">
-    <div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur asperiores veritatis deserunt fugiat dolorum reprehenderit magni alias, temporibus eius, unde veniam dignissimos ea ex molestias consectetur est officia neque quia?</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, rem debitis iure eligendi ab totam iusto voluptatibus eius autem eos minima repudiandae hic est at ipsa, laborum amet. Perferendis, aspernatur!</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tenetur dicta fugit, tempora ad nulla perferendis vel laboriosam exercitationem laborum dolorem deserunt a eius aut vitae ab. Ex, ipsum reprehenderit.</p>
-</div>
-<img src="" alt="billede">
-</section>
-</main>
-<Footer/>
+  <main>
+    <h1>UNDERVISNING</h1>
+    <section class="grid_1-1">
+      <p class="right">
+        Lorem ipsum dolor sit amet consectetur. Leo massa faucibus morbi integer
+        leo. Diam porttitor diam blandit tortor mauris et cursus. Semper nisi a
+        vitae velit velit eleifend. Id fringilla eget venenatis ut duis egestas.
+      </p>
+      <img src="" alt="billede" />
+    </section>
+    <section class="grid_1-1">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
+          asperiores veritatis deserunt fugiat dolorum reprehenderit magni
+          alias, temporibus eius, unde veniam dignissimos ea ex molestias
+          consectetur est officia neque quia?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, rem
+          debitis iure eligendi ab totam iusto voluptatibus eius autem eos
+          minima repudiandae hic est at ipsa, laborum amet. Perferendis,
+          aspernatur!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tenetur
+          dicta fugit, tempora ad nulla perferendis vel laboriosam
+          exercitationem laborum dolorem deserunt a eius aut vitae ab. Ex, ipsum
+          reprehenderit.
+        </p>
+      </div>
+      <img src="" alt="billede" />
+    </section>
+  </main>
 </MainLayout>
 <style>
-    /*MOBILE FIRST!*/
+  /*MOBILE FIRST!*/
 
-@media (min-width: 800px){
+  @media (min-width: 800px) {
     .grid_1-1 {
-display: grid;
-grid-template-columns: 1fr 1fr;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
     .right {
-        grid-column: 2/3;
+      grid-column: 2/3;
     }
-}
+  }
 </style>
