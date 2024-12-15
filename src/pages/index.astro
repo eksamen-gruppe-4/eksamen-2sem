@@ -10,15 +10,19 @@ import Card_behandling from "../components/Card_behandling.astro";
 <MainLayout>
   <main>
 <div class="hero_section" >
+  <!-- OBS KODE HVIS VI ENDER MED LOTTIEFILE <div class="lottie">
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <dotlottie-player src="https://lottie.host/a3e2418c-0beb-460a-aa87-2f549c3663bf/8F7Bt97hQQ.lottie" background="transparent" speed="1" style="width: 1800px; height: 600px;" loop autoplay>
-    <a href="#bestil_tid">
     </dotlottie-player>
-    <div class="book">
-    <Button class="button_orange" buttontext="Bestil tid"/></a>
+  </div> -->
+   <div class="hero_img">
+    <img src="../hero_dark-kopi.png" alt="hero"> <!--OBS HUSK AT REDIGERE IMG FORMAT -->
+   </div>
+    <div class="title_book">
+      <h1>Hair Creations by Gaia</h1>
+    <a href="#bestil_tid"><Button class="button_orange" buttontext="Bestil tid"/></a>
   </div>
 </div>
-    <!--Insert HeroSection -->
     <h1>BEHANDLINGER OG PRISER</h1>
     <!--Insert CardSection -->
     <section>
@@ -99,31 +103,53 @@ import Card_behandling from "../components/Card_behandling.astro";
 </MainLayout>
 
 <style>
-  #lokation,
-  .kundeanmeldelser {
-    border: 3px solid var(--secondary);
-    border-radius: 30px;
+  /* OBS KODE HVIS VI ENDER MED LOTTIEFILE .lottie {
+  display: flex;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  } */
+  .hero_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .hero_img {
+    animation: zoomIn 10s infinite alternate;
+    width: 100%;
+   }
+    /*Zoom-in animation*/
+    @keyframes zoomIn {
+    0%{
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  .title_book {
+  position: absolute;
+  z-index: 1;
+  }
+  .title_book h1 {
+    color: var(--primary);
+    font-size: 40pt;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+  }
+
+  #lokation, .kundeanmeldelser {
+border: 3px solid var(--secondary);
+border-radius: 30px;
   }
   .citat {
     font-family: var(--fontcitat);
   }
-  .hero_section {
-  display: flex;
-  justify-self: center;
-  position: relative;
-  width: 100%;
-  }
-  .book {
-  display: flex;
-  justify-self: center;
-  position: absolute;
-  bottom: 0;
-  }
-  img {
-    width: 100%;
-  }
   /*Styling desktop */
   @media (min-width: 800px) {
+    .title_book h1 {
+    font-size: 64pt;
+  }
     .lokation {
       display: grid;
       grid-template-columns: 1fr 1fr;
