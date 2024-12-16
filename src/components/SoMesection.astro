@@ -23,31 +23,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
 
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5em;
     justify-items: center;
   }
 
   .gallery img {
     border: 2px solid var(--secondary);
     transition: transform 0.3s ease;
+    margin-top: 2em;
   }
 
   .gallery img:hover {
     transform: scale(1.1);
-  }
-
-  .reel {
-    grid-row: 1 / span 2;
-  }
-
-  .billede1 {
-    grid-row: 2;
-    grid-column: 3;
   }
 </style>
