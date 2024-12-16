@@ -99,6 +99,11 @@ footer p {
   font-size: var(--fontsize1);
   line-height: 12pt;
 }
+
+img {
+  width: 100%;
+  border-radius: 30px;
+}
 /**Margin & padding mobile. OBS header og footer styles i egen komponent**/
 main {
   /*   margin: 3rem; */

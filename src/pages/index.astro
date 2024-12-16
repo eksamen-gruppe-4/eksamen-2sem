@@ -4,25 +4,29 @@ import Button from "../components/Button.astro";
 import Formular from "../components/Formular.astro";
 import SoMeIcons from "../components/SoMeIcons.astro";
 import Card_behandling from "../components/Card_behandling.astro";
+import PopUp from "../components/PopUp.astro";
 ---
 
 <!--OBS MOBILE FIRST!!! -->
 <MainLayout>
   <main>
-<div class="hero_section" >
-  <!-- OBS KODE HVIS VI ENDER MED LOTTIEFILE <div class="lottie">
+    <div class="hero_section">
+      <!-- OBS KODE HVIS VI ENDER MED LOTTIEFILE <div class="lottie">
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <dotlottie-player src="https://lottie.host/a3e2418c-0beb-460a-aa87-2f549c3663bf/8F7Bt97hQQ.lottie" background="transparent" speed="1" style="width: 1800px; height: 600px;" loop autoplay>
     </dotlottie-player>
   </div> -->
-   <div class="hero_img">
-    <img src="../hero_dark-kopi.png" alt="hero"> <!--OBS HUSK AT REDIGERE IMG FORMAT -->
-   </div>
-    <div class="title_book">
-      <h1>Hair Creations by Gaia</h1>
-    <a href="#bestil_tid"><Button class="button_orange" buttontext="Bestil tid"/></a>
-  </div>
-</div>
+      <div class="hero_img">
+        <img src="../hero_dark-kopi.png" alt="hero" />
+        <!--OBS HUSK AT REDIGERE IMG FORMAT -->
+      </div>
+      <div class="title_book">
+        <h1>Hair Creations by Gaia</h1>
+        <a href="#bestil_tid"
+          ><Button class="button_orange" buttontext="Bestil tid" /></a
+        >
+      </div>
+    </div>
     <h1>BEHANDLINGER OG PRISER</h1>
     <!--Insert CardSection -->
     <section>
@@ -36,6 +40,7 @@ import Card_behandling from "../components/Card_behandling.astro";
         </p>
         <!--Insert AnmeldelserSlideshow-->
       </div>
+      <PopUp />
     </section>
     <section>
       <h1>GALLERI</h1>
@@ -92,16 +97,21 @@ import Card_behandling from "../components/Card_behandling.astro";
     <section id="bestil_tid">
       <Formular />
     </section>
+    <section>
+      <a href="#top" class="bottom-arrow">
+        <img src="../svg/arrow-up.svg" alt="Pil Op" />
+      </a>
+    </section>
   </main>
 </MainLayout>
 
 <style>
-main {
-  background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
-  width: 100%;
-  margin:0;
-  background-attachment: fixed;
-}
+  main {
+    background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
+    width: 100%;
+    margin: 0;
+    background-attachment: fixed;
+  }
   /* OBS KODE HVIS VI ENDER MED LOTTIEFILE .lottie {
   display: flex;
   position: relative;
@@ -112,18 +122,17 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow:hidden;
+    overflow: hidden;
     border-radius: 10%;
-   }
-   .hero_img {
+  }
+  .hero_img {
     animation: zoomIn 10s infinite alternate;
     width: 100%;
-    overflow:hidden;
-    
-   }
-    /*Zoom-in animation*/
-    @keyframes zoomIn {
-    0%{
+    overflow: hidden;
+  }
+  /*Zoom-in animation*/
+  @keyframes zoomIn {
+    0% {
       transform: scale(1);
     }
     100% {
@@ -131,8 +140,8 @@ main {
     }
   }
   .title_book {
-  position: absolute;
-  z-index: 1;
+    position: absolute;
+    z-index: 1;
   }
   .title_book h1 {
     color: var(--primary);
@@ -152,11 +161,12 @@ background-color: var(--primary);
   .citat {
     font-family: var(--fontcitat);
   }
+
   /*Styling desktop */
   @media (min-width: 800px) {
     .title_book h1 {
-    font-size: 64pt;
-  }
+      font-size: 64pt;
+    }
     .lokation {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -168,6 +178,15 @@ background-color: var(--primary);
     }
     .map_img {
       grid-column: 2/3;
+    }
+    .bottom-arrow {
+      display: grid;
+      justify-content: center;
+    }
+    .bottom-arrow img {
+      width: 70px;
+      height: auto;
+      transition: all 0.3s ease;
     }
   }
 </style>
