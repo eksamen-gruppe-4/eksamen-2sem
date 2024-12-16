@@ -13,18 +13,32 @@ const products = await fetch(
     },
   }
 ).then((res) => res.json());
+
+let currentCategory = "Alle";
+let filteredProducts = products;
 ---
 
 <!-- Matilde -->
 <MainLayout>
   <main>
     <h1>PRODUKTER</h1>
-    <p></p>
-    <Button class="button_green" buttontext="Alle" />
-    <Button class="button_green" buttontext="Shampoo" />
-    <Button class="button_green" buttontext="Conditioner" />
-    <Button class="button_green" buttontext="Styling & Varmebeskyttelse" />
-    <div>
+    <p>
+      Jeg tilbyder et udvalg af Angel hårplejeprodukter i min salon. Mærket er
+      kendt for sin høje kvalitet, skånsomhed og bæredygtige fokus på naturlige
+      ingredienser og genanvendelig emballage. Her kan du finde en oversigt over
+      produkterne, som du kan købe direkte i salonen. Kom forbi og få rådgivning
+      om, hvilke produkter der passer bedst til dit hår.
+    </p>
+    <div class="button_container">
+      <Button class="button_green" buttontext="Alle" />
+      <Button class="button_green" buttontext="Shampoo" />
+      <Button class="button_green" buttontext="Conditioner" />
+      <Button class="button_green" buttontext="Styling & Varmebeskyttelse" />
+    </div>
+    <nav class="breadcrumb">
+      <a href="/products">Produkter</a> / <span>{currentCategory}</span>
+    </nav>
+    <div class="card_container">
       {
         products.map((product) => {
           return <Card_product product={product} />;
@@ -35,6 +49,77 @@ const products = await fetch(
 </MainLayout>
 
 <style>
+  @font-face {
+    font-family: "georama_regular";
+    src:
+      url("/fonts/georama_regular/georama-regular-webfont.woff2")
+        format("woff2"),
+      url("/fonts/georama_regular/georama-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "georama_regular_italic";
+    src:
+      url("/fonts/georama_regular_italic/georama-italic-webfont.woff2")
+        format("woff2"),
+      url("/fonts/georama_regular_italic/georama-italic-webfont.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "neuton_regular";
+    src:
+      url("/fonts/neuton/neuton-regular-webfont.woff2") format("woff2"),
+      url("/fonts/neuton/neuton-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  h1 {
+    padding: 5rem;
+  }
+
+  p {
+    margin: auto;
+    padding: 0 2rem 4rem;
+  }
+
+  .button_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .breadcrumb {
+    padding: 1rem;
+    text-decoration: underline;
+  }
+
+  .active {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 3px solid var(--secondary);
+  }
+
+  .card_container {
+    padding-bottom: 3rem;
+  }
+
+  @media (max-width: 799px) {
+    .card_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
   @media (min-width: 800px) {
     div {
       display: grid;
