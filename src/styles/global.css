@@ -97,9 +97,14 @@ footer p {
   font-size: var(--fontsize1);
   line-height: 12pt;
 }
+
+img {
+  width: 100%;
+  border-radius: 30px;
+}
 /**Margin & padding mobile. OBS header og footer styles i egen komponent**/
 main {
-/*   margin: 3rem; */
+  margin: 3rem;
 margin: 0 auto;
 }
 section {
@@ -153,7 +158,7 @@ h2 {
 
   /**Margin & padding desktop. OBS header og footer styles i egen komponent**/
   main {
-   /*  margin: 5rem; */
+   margin: 5rem;
     max-width: 1200px;
   }
   section,
