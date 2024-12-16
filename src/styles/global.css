@@ -10,25 +10,25 @@
 OBS Muligt vi ikke behøver alle som er gemt i fonts folder...**/
 @font-face {
   font-family: "georama_regular";
-  src: url("fonts/georama_regular/georama-regular-webfont.woff2")
+  src: url("/fonts/georama_regular/georama-regular-webfont.woff2")
       format("woff2"),
-    url("fonts/georama_regular/georama-regular-webfont.woff") format("woff");
+    url("/fonts/georama_regular/georama-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "georama_regular_italic";
-  src: url("fonts/georama_regular_italic/georama-italic-webfont.woff2")
+  src: url("/fonts/georama_regular_italic/georama-italic-webfont.woff2")
       format("woff2"),
-    url("fonts/georama_regular_italic/georama-italic-webfont.woff")
+    url("/fonts/georama_regular_italic/georama-italic-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "neuton_regular";
-  src: url("fonts/neuton/neuton-regular-webfont.woff2") format("woff2"),
-    url("fonts/neuton/neuton-regular-webfont.woff") format("woff");
+  src: url("/fonts/neuton/neuton-regular-webfont.woff2") format("woff2"),
+    url("/fonts/neuton/neuton-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
