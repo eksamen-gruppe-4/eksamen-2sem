@@ -1,0 +1,41 @@
+<section class="container">
+  <div class="gallery">
+    <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
+      <img class="reel" src="./img/some1.png" alt="Billede 1" />
+    </a>
+    <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
+      <img class="billede2" src="./img/some5.png" alt="Billede 2" />
+    </a>
+    <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
+      <img class="billede1" src="./img/some2.png" alt="Billede 3" />
+    </a>
+    <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
+      <img class="billede2" src="./img/some3.png" alt="Billede 4" />
+    </a>
+    <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
+      <img class="billede1" src="./img/some4.png" alt="Billede 5" />
+    </a>
+  </div>
+</section>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery {
+    justify-items: center;
+  }
+
+  .gallery img {
+    border: 2px solid var(--secondary);
+    transition: transform 0.3s ease;
+    margin-top: 2em;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+</style>

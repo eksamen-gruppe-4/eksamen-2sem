@@ -5,6 +5,9 @@ import Formular from "../components/Formular.astro";
 import SoMeIcons from "../components/SoMeIcons.astro";
 import Card_behandling from "../components/Card_behandling.astro";
 import PopUp from "../components/PopUp.astro";
+import SoMesection from "../components/SoMesection.astro";
+import Slider from "../components/Slider.astro";
+
 ---
 
 <!--OBS MOBILE FIRST!!! -->
@@ -17,6 +20,7 @@ import PopUp from "../components/PopUp.astro";
     </dotlottie-player>
   </div> -->
       <div class="hero_img">
+
         <img src="../img/herosection.webp" alt="hero" />
       </div>
       <div class="title_book">
@@ -31,13 +35,7 @@ import PopUp from "../components/PopUp.astro";
     <section>
       <div class="kundeanmeldelser">
         <h1>LÆS HVAD KUNDERNE SIGER</h1>
-        <p class="citat">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          laudantium quisquam cupiditate itaque odio eum accusantium maiores a
-          eligendi autem iusto id fugiat quae unde iste, aspernatur deserunt
-          commodi hic?"
-        </p>
-        <!--Insert AnmeldelserSlideshow-->
+        <Slider />
       </div>
       <PopUp />
     </section>
@@ -135,7 +133,7 @@ import PopUp from "../components/PopUp.astro";
     </section>
     <section>
       <h1>FØLG MIG HER</h1>
-      <!--Insert SoMe galleri -->
+      <SoMesection />
       <SoMeIcons />
     </section>
     <section class="produkter">
@@ -190,10 +188,18 @@ import PopUp from "../components/PopUp.astro";
     padding-bottom: 2rem;
   }
 
+
   #lokation, .kundeanmeldelser, #moed_gaia, #undervisning, .produkter, #bestil_tid {
 border: 3px solid var(--secondary);
 border-radius: 30px;
 background-color: var(--primary);
+
+  #lokation,
+  .kundeanmeldelser {
+    border: 3px solid var(--secondary);
+    border-radius: 30px;
+    background-color: var(--primary);
+
   }
   .moed_gaia img, .undervisning img {
       max-width: 80%;
@@ -266,6 +272,7 @@ background-color: var(--primary);
       align-items: center;
     }
    
+
     .lokation {
       display: grid;
       grid-template-columns: 1fr 1fr;
