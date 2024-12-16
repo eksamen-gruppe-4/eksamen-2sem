@@ -1,56 +1,70 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Header from "../layouts/Header.astro";
-import Footer from "../layouts/Footer.astro";
 ---
 
 <!--Skal behandlingsoversigten være statisk eller dynamisk? -->
 <MainLayout>
   <main>
+    <div class="undervisning_side">
     <h1>UNDERVISNING</h1>
     <section class="grid_1-1">
+      <div>
+      <h2>Farvekurser med plads til fordybelse og god stemning</h2>
       <p class="right">
-        Lorem ipsum dolor sit amet consectetur. Leo massa faucibus morbi integer
-        leo. Diam porttitor diam blandit tortor mauris et cursus. Semper nisi a
-        vitae velit velit eleifend. Id fringilla eget venenatis ut duis egestas.
+        Vil du lære at farve hår som en pro? Jeg tilbyder små, hyggelige farvekurser med plads til maks. 4 deltagere, hvor vi går i dybden med teknikkerne – og der er tid til både spørgsmål, grin og en god kop kaffe undervejs.
       </p>
-      <img src="" alt="billede" />
+      <h3>Hvad går kurset ud på?</h3>
+      <p>
+      Jeg demonstrerer, hvordan jeg arbejder med en model fra start til slut, og forklarer alt, hvad jeg gør undervejs. Du får en detaljeret gennemgang af farvevalg, teknikker og små tips og tricks, som du kan bruge i din egen hverdag. Og ja, vi tager det i et roligt tempo, hvor der er plads til både nysgerrighed og faglige snakke.
+      </p>
+      <li>Tid: 5-6 timer (det lyder længe, men tro mig, tiden flyver afsted).</li>
+      <li>Pris: 1.500 kr. pr. person.</li>
+    </div>
+      <img class="left" src="" alt="billede" />
     </section>
     <section class="grid_1-1">
       <div>
+        <h3>Hvad er inkluderet?</h3>
+        <li>Drikkelse: Jeg sørger for te, kaffe eller varm kakao – nok til at holde energien oppe hele vejen igennem.</li>
+        <li>Frokost: En lækker valgfri frokost fra min nabo Kys Kokken (fordi ingen kan lære noget på en tom mave).</li>
+        <li>Ekstraudstyr: Du har mulighed for at købe professionelle kamme, pensler og andre redskaber, der gør dit arbejde nemmere.</li>
+        <h3>Hvorfor vælge mit kursus?</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
-          asperiores veritatis deserunt fugiat dolorum reprehenderit magni
-          alias, temporibus eius, unde veniam dignissimos ea ex molestias
-          consectetur est officia neque quia?
+          Det her er ikke bare et kursus – det er en oplevelse, hvor du både lærer nye teknikker og får plads til at fordybe dig i dit håndværk i en afslappet og uformel atmosfære. Jeg deler mine bedste tips og tricks – og sørger for, at du går hjem med både ny viden og inspiration.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, rem
-          debitis iure eligendi ab totam iusto voluptatibus eius autem eos
-          minima repudiandae hic est at ipsa, laborum amet. Perferendis,
-          aspernatur!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam tenetur
-          dicta fugit, tempora ad nulla perferendis vel laboriosam
-          exercitationem laborum dolorem deserunt a eius aut vitae ab. Ex, ipsum
-          reprehenderit.
+          Har du spørgsmål, eller vil du sikre dig en plads? Skriv til mig her på siden eller giv mig et kald. Jeg glæder mig til at nørde hårfarver med dig!
         </p>
       </div>
-      <img src="" alt="billede" />
+      <img class="right" src="" alt="billede" />
     </section>
+  </div>
   </main>
 </MainLayout>
 <style>
   /*MOBILE FIRST!*/
-
+  .undervisning_side {
+  border: 3px solid var(--secondary);
+  border-radius: 30px;
+  background-color: var(--primary);
+  margin: 4rem;
+  }
   @media (min-width: 800px) {
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
     }
     .right {
       grid-column: 2/3;
+      grid-row: 1/2;
+    }
+    .left {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    } ;
+    h2 {
+      text-align: left;
     }
   }
 </style>

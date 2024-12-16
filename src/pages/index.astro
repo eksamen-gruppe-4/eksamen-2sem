@@ -41,7 +41,7 @@ import Card_behandling from "../components/Card_behandling.astro";
       <h1>GALLERI</h1>
       <!--Insert Gallery -->
     </section>
-    <section>
+    <section class="moed_gaia">
       <h1>MØD GAIA</h1>
       <img src="" alt="portrætbillede" />
       <p>
@@ -59,22 +59,18 @@ import Card_behandling from "../components/Card_behandling.astro";
           ><img src="../img/maps.webp" alt="googlemaps" /></a
         >
         <div class="parkeringsinfo">
-          <h2>Parkeringsinformation</h2>
+          <p>Ramsherred 23D, 4700 Næstved</p>
+          <h3>Parkeringsinformation</h3>
           <p>
-            Lorem ipsum tekst Lorem ipsum tekstLorem ipsum tekst Lorem ipsum
-            tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekstLorem
-            ipsum tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
+           Til dem af jer som kommer i bil, så er der ubegrænset parkering på parkeringspladsen nedenfor MENY og Hotel Kirstine. Det tager kun 4 minutter at gå til salonen herfra.
           </p>
+          <p>Til dem af jer som kommer med tog, så tager det 7 minutter at gå fra Næstved station.</p>
         </div>
       </div>
     </section>
-    <section>
+    <section class="undervisning">
       <h1>UNDERVISNING</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur. Leo massa faucibus morbi integer
-        leo. Diam porttitor diam blandit tortor mauris et cursus. Semper nisi a
-        vitae velit velit eleifend. Id fringilla eget venenatis ut duis egestas.
-      </p>
+      <p>Er du uddannet frisør og vil lære at farve hår som en pro? Jeg tilbyder små, hyggelige farvekurser med plads til fordybelse og god stemning, hvor du både lærer nye teknikker og får plads til at fordybe dig i dit håndværk i en afslappet og uformel atmosfære. Jeg deler mine bedste tips og tricks – og sørger for, at du går hjem med både ny viden og inspiration.</p>
       <a href="/undervisning"
         ><Button class="button_green" buttontext="Læs mere" /></a
       >
@@ -85,12 +81,9 @@ import Card_behandling from "../components/Card_behandling.astro";
       <!--Insert SoMe galleri -->
       <SoMeIcons />
     </section>
-    <section>
+    <section class="produkter">
       <h1>PRODUKTER</h1>
-      <p>
-        Jeg går meget op i at bruge produkter af høj kvalitet, men som også
-        tager hensyn til miljøet. I salonen har du mulighed til at købe
-        produkterne med hjem. Se mit udvalg af produkter her!
+      <p>Som frisør går jeg meget op i at bruge produkter af høj kvalitet, men som samtidig tager hensyn til dig og miljøet. I salonen har du mulighed til at købe produkterne med hjem. Se mit udvalg af økologiske produkter her!
       </p>
       <a href="/products/"
         ><Button class="button_green" buttontext="Se alle produkter" /></a
@@ -148,7 +141,7 @@ main {
     padding-bottom: 2rem;
   }
 
-  #lokation, .kundeanmeldelser {
+  #lokation, .kundeanmeldelser, .moed_gaia, .undervisning, .produkter, #bestil_tid {
 border: 3px solid var(--secondary);
 border-radius: 30px;
 background-color: var(--primary);
