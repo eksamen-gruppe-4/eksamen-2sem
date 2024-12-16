@@ -17,7 +17,7 @@ import PopUp from "../components/PopUp.astro";
     </dotlottie-player>
   </div> -->
       <div class="hero_img">
-        <img src="../hero_dark-kopi.png" alt="hero" />
+        <img src="../img/herosection.webp" alt="hero" />
         <!--OBS HUSK AT REDIGERE IMG FORMAT -->
       </div>
       <div class="title_book">
@@ -48,12 +48,14 @@ import PopUp from "../components/PopUp.astro";
     </section>
     <section id="moed_gaia">
       <h1>MØD GAIA</h1>
-      <img src="" alt="portrætbillede" />
+      <div class="moed_gaia">
+      <img src="../img/portrait.webp" alt="portrætbillede" />
       <p>
         Tekst om Gaia og hendes vision. Lorem ipsum tekst LorLorem ipsum tekst
         Lorem ipsum tekstLorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
         Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
       </p>
+    </div>
     </section>
     <section id="lokation">
       <h1>HER FINDER DU SALONEN</h1>
@@ -73,13 +75,17 @@ import PopUp from "../components/PopUp.astro";
         </div>
       </div>
     </section>
-    <section class="undervisning">
+    <section id="undervisning">
       <h1>UNDERVISNING</h1>
+      <div class="undervisning">
+        <div class="right">
       <p>Er du uddannet frisør og vil lære at farve hår som en pro? Jeg tilbyder små, hyggelige farvekurser med plads til fordybelse og god stemning, hvor du både lærer nye teknikker og får plads til at fordybe dig i dit håndværk i en afslappet og uformel atmosfære. Jeg deler mine bedste tips og tricks – og sørger for, at du går hjem med både ny viden og inspiration.</p>
       <a href="/undervisning"
         ><Button class="button_green" buttontext="Læs mere" /></a
       >
-      <img src="" alt="undervisningsbillede" />
+    </div>
+      <img src="../img/undervisning_forside.webp" alt="undervisningsbillede" />
+    </div>
     </section>
     <section>
       <h1>FØLG MIG HER</h1>
@@ -106,12 +112,7 @@ import PopUp from "../components/PopUp.astro";
 </MainLayout>
 
 <style>
-  main {
-    background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
-    width: 100%;
-    margin: 0;
-    background-attachment: fixed;
-  }
+
   /* OBS KODE HVIS VI ENDER MED LOTTIEFILE .lottie {
   display: flex;
   position: relative;
@@ -150,14 +151,18 @@ import PopUp from "../components/PopUp.astro";
     padding-bottom: 2rem;
   }
 
-  #lokation, .kundeanmeldelser, #moed_gaia, .undervisning, .produkter, #bestil_tid {
+  #lokation, .kundeanmeldelser, #moed_gaia, #undervisning, .produkter, #bestil_tid {
 border: 3px solid var(--secondary);
 border-radius: 30px;
 background-color: var(--primary);
   }
+  .moed_gaia img, .undervisning img {
+      max-width: 80%;
+    }
   .lokation img {
     width: 100%;
   }
+  
   .citat {
     font-family: var(--fontcitat);
   }
@@ -167,6 +172,12 @@ background-color: var(--primary);
     .title_book h1 {
       font-size: 64pt;
     }
+    .moed_gaia{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+   
     .lokation {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -178,6 +189,15 @@ background-color: var(--primary);
     }
     .map_img {
       grid-column: 2/3;
+    }
+    .undervisning {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+    .right{
+      grid-column: 2/3;
+      grid-row: 1/2;
     }
     .bottom-arrow {
       display: grid;
