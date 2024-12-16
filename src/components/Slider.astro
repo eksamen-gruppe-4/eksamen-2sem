@@ -1,0 +1,130 @@
+<section>
+  <button class="prev-quote">
+    <img class="pil" src="./svg/pilop.png" alt="Venstre pil" />
+  </button>
+  <div class="quote" id="current-quote">
+    <img
+      class="billede1"
+      id="quote-image"
+      src="./img/some1.png"
+      alt="Billede"
+    />
+    <div>
+      <p class="citat">
+        "Fantastisk oplevelse! Jeg føler mig altid velkommen, og Gaia lytter
+        virkelig til, hvad jeg ønsker. Resultatet er perfekt hver gang – kan
+        varmt anbefale hende!"
+      </p>
+      <p class="person">Maja Hansen</p>
+    </div>
+  </div>
+  <button class="next-quote">
+    <img class="pil" src="./svg/pilned.png" alt="Højre pil" />
+  </button>
+</section>
+
+<style>
+  section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pil {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .quote {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 700px;
+    gap: 20px;
+  }
+
+  .billede1 {
+    max-width: 150px;
+    border-radius: 5px;
+    height: auto;
+  }
+
+  .citat {
+    font-style: italic;
+    max-width: 60ch;
+  }
+
+  .person {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #783e19;
+    width: 100%;
+  }
+
+  .prev-quote,
+  .next-quote {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .prev-quote {
+    left: 10px;
+  }
+
+  .next-quote {
+    right: 10px;
+  }
+</style>
+
+<script>
+  const quotes = [
+    {
+      text: `  "Fantastisk oplevelse! Jeg føler mig altid velkommen, og Gaia lytter
+        virkelig til, hvad jeg ønsker. Resultatet er perfekt hver gang – kan varmt
+        anbefale hende!"`,
+      person: "Frida Taggatz Ovesen",
+      image: "../img/gallerier/billede7.png", // Billede for første citat
+    },
+    {
+      text: `"Jeg er vild med mit nye look! Gaia formåede virkelig at forstå, hvad jeg ønskede, og resultatet er endnu bedre, end jeg havde håbet på."`,
+      person: "Jeanette Stockel",
+      image: "../img/gallerier/billede8.png", // Billede for andet citat
+    },
+  ];
+
+  let currentIndex = 0;
+  const currentQuote = document.getElementById("current-quote");
+  const quoteImage = document.getElementById("quote-image");
+
+  function updateQuote(index) {
+    const { text, person, image } = quotes[index];
+
+    // Find og opdater elementerne
+    const citatElement = currentQuote.querySelector(".citat");
+    const personElement = currentQuote.querySelector(".person");
+
+    citatElement.textContent = text;
+    personElement.textContent = person;
+    quoteImage.src = image; // Opdaterer billedet
+  }
+
+  document.querySelector(".prev-quote").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + quotes.length) % quotes.length;
+    updateQuote(currentIndex);
+  });
+
+  document.querySelector(".next-quote").addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % quotes.length;
+    updateQuote(currentIndex);
+  });
+
+  // Initial opdatering af citat og billede
+  updateQuote(currentIndex);
+</script>
