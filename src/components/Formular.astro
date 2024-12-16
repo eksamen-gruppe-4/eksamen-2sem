@@ -2,15 +2,17 @@
 import Button from "./Button.astro";
 ---
 <!--MOBILE FIRST!!! Katinka -->
-
+<h1>BOOK TID</h1>
 <form>
-    <h1>BOOK TID</h1>
+    <div>
     <p>Ønsker du at bestille tid eller har du nogle spørgsmål?<br>
       For mig er det vigtigt at vide lidt mere om dig og dine ønsker, for at sikre at jeg sætter nok tid af til at opfylde din hår-drøm :)<br>
       Brug venligst mit kontaktformular, så finder vi en tid som passer.<br>
       Jeg ser frem til at høre fra dig!<br>
       Kærlig hilsen,<br>
       Gaia</p>
+    </div>
+    <div>
       <h2>KONTAKTFORMULAR</h2>
 <div>
 <input type="text" placeholder="Udfyld navn" name="navn" required>
@@ -18,6 +20,7 @@ import Button from "./Button.astro";
 <input type="text" placeholder="Udfyld tlf. nr." name="tlf" required>
 <input type="text" placeholder="Min henvendelse vedrører" name="text" required>
 <a href=""><Button class="button_orange" buttontext="Send"/></a>
+</div>
 </div>
 </form>
 
@@ -28,5 +31,11 @@ input {
     margin: .3rem;
     border-radius: 30px;
     /* OBS finde kode til at gøre border lysegrå hele vejen rundt */
+}
+@media (min-width: 800px) {
+form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 }
 </style>

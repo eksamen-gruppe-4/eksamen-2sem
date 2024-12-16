@@ -1,19 +1,18 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Header from "../layouts/Header.astro";
 import Formular from "../components/Formular.astro";
-import Footer from "../layouts/Footer.astro";
 ---
 
 <!--Skal behandlingsoversigten være statisk eller dynamisk? -->
 <MainLayout>
   <main>
     <h1>BEHANDLINGER OG PRISER</h1>
-    <h2>CUT & STYLING</h2>
-    <section class="grid_1-1">
+    <section>
+      <h2>CUT & STYLING</h2>
+      <div class="grid_1-1">
       <div>
         <h3>CLASSIC CUT</h3>
-        <p>150,-</p>
+        <p class="pris">150,-</p>
         <p>
           Skræddersyet klipning som passer dig og din livsstil. Der vil indgå
           klippeteknikker både i vådt og tørt hår. Hårvask og en smuk styling og
@@ -22,7 +21,7 @@ import Footer from "../layouts/Footer.astro";
       </div>
       <div>
         <h3>MAINTENANCE CUT</h3>
-        <p>485,-</p>
+        <p class="pris">485,-</p>
         <p>
           Vedligeholdende klip i tørt hår der er vasket hjemmefra den pågældende
           dag. Perfekt til dig som ikke ønsker den store forandring, men blot
@@ -31,13 +30,14 @@ import Footer from "../layouts/Footer.astro";
         </p>
       </div>
       <img src="../svg/sakse.svg" alt="sakse" />
+    </div>
     </section>
-
-    <h2>COLOR BEHANDLINGER</h2>
-    <section class="grid_1-1">
+    <section>
+      <h2>COLOR BEHANDLINGER</h2>
+      <div class="grid_1-1">
       <div>
         <h3>CLASSIC SOLID COLOR</h3>
-        <p>
+        <p class="pris">
           m/klip 1290,-<br />
           u/klip 810,-
         </p>
@@ -48,7 +48,7 @@ import Footer from "../layouts/Footer.astro";
           spids.
         </p>
         <h3>CLASSIC SOLID COLOR TOUCH UP</h3>
-        <p>
+        <p class="pris">
           m/klip 995,-<br />
           u/klip 515,-
         </p>
@@ -59,7 +59,7 @@ import Footer from "../layouts/Footer.astro";
       </div>
       <div>
         <h3>GLOSSY MANE</h3>
-        <p>
+        <p class="pris">
           m/klip 810,-<br />
           u/klip 495,-
         </p>
@@ -69,7 +69,7 @@ import Footer from "../layouts/Footer.astro";
           friskt pust. Behandlingen er inkl. styling.
         </p>
         <h3>REVERSE FACE FRAME</h3>
-        <p>
+        <p class="pris">
           m/klip 855,-<br />
           u/klip 375,-
         </p>
@@ -82,13 +82,14 @@ import Footer from "../layouts/Footer.astro";
         </p>
       </div>
       <img src="../svg/sakse.svg" alt="sakse" />
+    </div>
     </section>
-
-    <h2>BLONDING BEHANDLINGER</h2>
-    <section class="grid_1-1">
+    <section>
+      <h2>BLONDING BEHANDLINGER</h2>
+      <div class="grid_1-1">
       <div>
         <h3>CLASSIC BLONDE</h3>
-        <p>
+        <p class="pris">
           m/klip 1795,-<br />
           u/klip 1595,-
         </p>
@@ -100,7 +101,7 @@ import Footer from "../layouts/Footer.astro";
           glossy og styling.
         </p>
         <h3>BEACH BLONDE</h3>
-        <p>
+        <p class="pris">
           m/klip 1895,-<br />
           u/klip 1695,-
         </p>
@@ -114,7 +115,7 @@ import Footer from "../layouts/Footer.astro";
       </div>
       <div>
         <h3>DIMENTIONAL BLONDE</h3>
-        <p>
+        <p class="pris">
           m/klip 1995,-<br />
           u/klip 1795,-
         </p>
@@ -126,7 +127,7 @@ import Footer from "../layouts/Footer.astro";
           Behandlingen er inkl. en colormelt og styling.
         </p>
         <h3>REVERSE BLONDE</h3>
-        <p>
+        <p class="pris">
           m/klip 1595,-<br />
           u/klip 1395,-
         </p>
@@ -138,7 +139,7 @@ import Footer from "../layouts/Footer.astro";
           og styling.
         </p>
         <h3>MAINTENANCE BLONDE</h3>
-        <p>
+        <p class="pris">
           m/klip 1495,-<br />
           u/klip 1295,-
         </p>
@@ -149,24 +150,28 @@ import Footer from "../layouts/Footer.astro";
         </p>
       </div>
       <img src="../svg/sakse.svg" alt="sakse" />
+    </div>
     </section>
-
-    <h2>BROWS & LASHES</h2>
-    <section class="grid_1-1">
+    <section>
+      <h2>BROWS & LASHES</h2>
+      <div class="grid_1-1">
       <div>
         <h3>BROW TINT</h3>
-        <p>150,-</p>
+        <p class="pris">150,-</p>
         <h3>LASH TINT</h3>
-        <p>175,-</p>
+        <p class="pris">175,-</p>
       </div>
       <div>
         <h3>BROWS & LASH TINT</h3>
-        <p>250,-</p>
+        <p class="pris">250,-</p>
         <h3>BROW WAX</h3>
-        <p>100,-</p>
+        <p class="pris">100,-</p>
       </div>
+    </div>
     </section>
+    <section id=bestil_tid>
     <Formular />
+    </section>
   </main>
 </MainLayout>
 <style>
@@ -179,6 +184,9 @@ import Footer from "../layouts/Footer.astro";
     border: 3px solid var(--secondary);
     border-radius: 30px;
   }
+  .pris {
+    text-align: right;
+  }
   img {
     height: 80px;
     width: 80px;
@@ -189,6 +197,11 @@ import Footer from "../layouts/Footer.astro";
   }
   p {
     padding-bottom: 1.2rem;
+  }
+  #bestil_tid {
+  border: 3px solid var(--secondary);
+  border-radius: 30px;
+  background-color: var(--primary);
   }
 
   @media (min-width: 800px) {
