@@ -7,6 +7,7 @@ import Card_behandling from "../components/Card_behandling.astro";
 import PopUp from "../components/PopUp.astro";
 import SoMesection from "../components/SoMesection.astro";
 import Slider from "../components/Slider.astro";
+//@ts-nocheck
 ---
 
 <!--OBS MOBILE FIRST!!! -->
@@ -127,10 +128,42 @@ import Slider from "../components/Slider.astro";
             Til dem af jer som kommer med tog, så tager det 7 minutter at gå fra
             Næstved station.
           </p>
+        </div>
+        <div class="afbud">
           <h3>Afbudspolitik</h3>
           <p>
-            Til dem af jer som kommer med tog, så tager det 7 minutter at gå fra
-            Næstved station.
+            Når I booker en tid til en behandling, er det vigtigt at i aflyser
+            tiden minimum 24 timer inden. Skulle du aflyse tiden med kortere
+            varsel end 24 timer eller udeblive helt, vil jeg forbeholde mig
+            retten til at afslå at lave en ny tid med dig hvis min
+            mavefornemmelse siger mig at den korte varsel om aflysning eller
+            udeblivelse kunne gentage sig i fremtiden.
+          </p>
+          <p>
+            Jeg forstår, at livet kan være uforudsigeligt, og jeg gør også gerne
+            undtagelser, men prøv at lade mig det vide i så god tid som muligt,
+            så jeg kan tilbyde tiden til en anden kunde.
+          </p>
+          <h3>Tillægsklausul: Ved forsinkelse</h3>
+          <p>
+            Hos Hair Creations by Gaia forstår jeg vigtigheden af punktlighed
+            for at sikre en glat oplevelse for alle mine kunder. Derfor beder
+            jeg jer om at være venlige at ankomme til jeres aftalte tid ( efter
+            bedste evne :))
+          </p>
+          <p>
+            I tilfælde af forsinkelse på mere end 20 minutter forbeholder jeg
+            mig retten til at opkræve det fulde beløb for den bookede
+            behandling. Jeg vil dog gøre mit bedste for at levere den service,
+            der kan lade sig gøre inden for den resterende tid.
+          </p>
+          <p>
+            Jeg værdsætter jeres forståelse og samarbejde med hensyn til denne
+            klausul, da det hjælper med at sikre en glat drift og en positiv
+            oplevelse for alle mine kunder.
+          </p>
+          <p>
+            Tak for jeres forståelse og støtte. Jeg sætter stor pris på jer!
           </p>
         </div>
       </div>
@@ -243,7 +276,10 @@ import Slider from "../components/Slider.astro";
   .lokation img {
     width: 100%;
   }
-
+  .lokation h3,
+  .afbud h3 {
+    margin-top: 1rem;
+  }
   .citat {
     font-family: var(--fontcitat);
   }
@@ -316,6 +352,10 @@ import Slider from "../components/Slider.astro";
     .parkeringsinfo {
       grid-column: 1/2;
       grid-row: 1/2;
+    }
+    .afbud {
+      grid-column: 2/3;
+      grid-row: auto;
     }
     .map_img {
       grid-column: 2/3;
