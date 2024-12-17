@@ -30,7 +30,33 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
       </div>
     </div>
     <h1>BEHANDLINGER OG PRISER</h1>
-    <!--Insert CardSection -->
+    <div class="card_container">
+      <Card_behandling
+        link="/behandlinger#1"
+        imgSrc="/img/cut_styling.webp"
+        altTekst="Cut & Styling"
+        title="Cut & Styling"
+      />
+      <Card_behandling
+        link="/behandlinger#2"
+        imgSrc="/img/color_behandling.webp"
+        altTekst="Color Behandling"
+        title="Color Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#3"
+        imgSrc="/img/blonding_behandling.webp"
+        altTekt="Blonding Behandling"
+        title="Blonding Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#4"
+        imgSrc="/img/brows_lashes.webp"
+        altTekst="Brows & Lashes"
+        title="Brows & Lashes"
+      />
+    </div>
+
     <section>
       <div class="kundeanmeldelser">
         <h1>LÆS HVAD KUNDERNE SIGER</h1>
@@ -322,6 +348,10 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
 
   /*Styling desktop */
   @media (min-width: 800px) {
+    .card_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
     .title_book h1 {
       font-size: 64pt;
     }

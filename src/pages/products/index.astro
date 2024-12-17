@@ -13,32 +13,6 @@ const products = await fetch(
     },
   }
 ).then((res) => res.json());
-
-/* //vælg alle cards
-const kort = document.querySelectorAll(".card");
-//vælg alle filterknapper
-const knapper = document.querySelectorAll("button");
-//sæt click eventlistener på alle knapper som kalder filtrer-funktionen
-knapper.forEach((knap) => knap.addEventListener("click", filtrer));
-
-function filtrer() {
-  //afmarker den aktive knap
-  document.querySelector(".active").classList.remove("active");
-  //marker den knap der blev klikket på ved at tilføje klassen "aktiv"
-  this.classList.add("active");
-
-  //loop igennem alle cards og sammenlign disses data-attribut med data-attributten på den filter-knap der blev klikket på. Hvis der er match vises kortet ved at fjerne skjul-klassen. Øvrige kort skjules
-  kort.forEach((elm) => {
-    if (
-      elm.dataset.filter == this.dataset.filter ||
-      this.dataset.filter == "alle"
-    ) {
-      elm.classList.remove("hide");
-    } else {
-      elm.classList.add("hide");
-    }
-  });
-} */
 ---
 
 <!-- Matilde -->
@@ -63,7 +37,7 @@ function filtrer() {
       <Button
         class="button_green"
         buttontext="Styling & Varmebeskyttelse"
-        filter="Styling & Varmebeskyttelse"
+        filter="StylingVarmebeskyttende"
       />
     </div>
     <div class="card_container">
@@ -126,12 +100,6 @@ function filtrer() {
     gap: 1rem;
   }
 
-  .active {
-    background-color: var(--secondary);
-    color: var(--primary);
-    border: 3px solid var(--secondary);
-  }
-
   .hide {
     display: none;
   }
@@ -154,3 +122,54 @@ function filtrer() {
     }
   }
 </style>
+<script>
+  //vælg alle cards
+  const kort = document.querySelectorAll(".card");
+
+  //vælg alle filterknapper
+  const knapper = document.querySelectorAll("button");
+  //sæt click eventlistener på alle knapper som kalder filtrer-funktionen
+  knapper.forEach((knap) => knap.addEventListener("click", filtrer));
+  /* 
+  function filtrer() {
+    //afmarker den aktive knap
+    document.querySelector(".active").classList.remove("active");
+    //marker den knap der blev klikket på ved at tilføje klassen "aktiv"
+    this.classList.add("active");
+
+    //loop igennem alle cards og sammenlign disses data-attribut med data-attributten på den filter-knap der blev klikket på. Hvis der er match vises kortet ved at fjerne skjul-klassen. Øvrige kort skjules
+    kort.forEach((elm) => {
+      if (
+        elm.dataset.filter == this.dataset.filter ||
+        this.dataset.filter == "Alle"
+      ) {
+        elm.classList.remove("hide");
+      } else {
+        elm.classList.add("hide");
+      }
+    });
+  } */
+
+  function filtrer() {
+    // Find den nuværende aktive knap, hvis der er en
+    const aktivKnap = document.querySelector(".active");
+    if (aktivKnap) {
+      aktivKnap.classList.remove("active");
+    }
+
+    // Marker den knap, der blev klikket på, som aktiv
+    this.classList.add("active");
+
+    // Loop igennem alle cards og sammenlign data-attributter
+    kort.forEach((elm) => {
+      if (
+        elm.dataset.filter == this.dataset.filter ||
+        this.dataset.filter == "Alle"
+      ) {
+        elm.classList.remove("hide");
+      } else {
+        elm.classList.add("hide");
+      }
+    });
+  }
+</script>
