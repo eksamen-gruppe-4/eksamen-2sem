@@ -5,6 +5,8 @@ import Formular from "../components/Formular.astro";
 import SoMeIcons from "../components/SoMeIcons.astro";
 import Card_behandling from "../components/Card_behandling.astro";
 import PopUp from "../components/PopUp.astro";
+import SoMesection from "../components/SoMesection.astro";
+import Slider from "../components/Slider.astro";
 ---
 
 <!--OBS MOBILE FIRST!!! -->
@@ -18,7 +20,6 @@ import PopUp from "../components/PopUp.astro";
   </div> -->
       <div class="hero_img">
         <img src="../img/herosection.webp" alt="hero" />
-        <!--OBS HUSK AT REDIGERE IMG FORMAT -->
       </div>
       <div class="title_book">
         <h1>Hair Creations by Gaia</h1>
@@ -32,13 +33,7 @@ import PopUp from "../components/PopUp.astro";
     <section>
       <div class="kundeanmeldelser">
         <h1>LÆS HVAD KUNDERNE SIGER</h1>
-        <p class="citat">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          laudantium quisquam cupiditate itaque odio eum accusantium maiores a
-          eligendi autem iusto id fugiat quae unde iste, aspernatur deserunt
-          commodi hic?"
-        </p>
-        <!--Insert AnmeldelserSlideshow-->
+        <Slider />
       </div>
       <PopUp />
     </section>
@@ -152,7 +147,7 @@ import PopUp from "../components/PopUp.astro";
     </section>
     <section>
       <h1>FØLG MIG HER</h1>
-      <!--Insert SoMe galleri -->
+      <SoMesection />
       <SoMeIcons />
     </section>
     <section class="produkter">
@@ -179,18 +174,12 @@ import PopUp from "../components/PopUp.astro";
 </MainLayout>
 
 <style>
-  /* OBS KODE HVIS VI ENDER MED LOTTIEFILE .lottie {
-  display: flex;
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  } */
   .hero_section {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: 30px;
   }
   .hero_img {
     animation: zoomIn 10s infinite alternate;
