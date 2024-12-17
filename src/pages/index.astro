@@ -96,13 +96,14 @@ import PopUp from "../components/PopUp.astro";
     <section id="moed_gaia">
       <h1>MØD GAIA</h1>
       <div class="moed_gaia">
-      <img src="../img/portrait.webp" alt="portrætbillede" />
-      <p>
-        Tekst om Gaia og hendes vision. Lorem ipsum tekst LorLorem ipsum tekst
-        Lorem ipsum tekstLorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
-        Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
-      </p>
-    </div>
+        <img src="../img/portrait.webp" alt="portrætbillede" />
+        <p>
+          Tekst om Gaia og hendes vision. Lorem ipsum tekst LorLorem ipsum tekst
+          Lorem ipsum tekstLorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
+          Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum
+          tekst
+        </p>
+      </div>
     </section>
     <section id="lokation">
       <h1>HER FINDER DU SALONEN</h1>
@@ -116,9 +117,14 @@ import PopUp from "../components/PopUp.astro";
           <p>Ramsherred 23D, 4700 Næstved</p>
           <h3>Parkeringsinformation</h3>
           <p>
-           Til dem af jer som kommer i bil, så er der ubegrænset parkering på parkeringspladsen nedenfor MENY og Hotel Kirstine. Det tager kun 4 minutter at gå til salonen herfra.
+            Til dem af jer som kommer i bil, så er der ubegrænset parkering på
+            parkeringspladsen nedenfor MENY og Hotel Kirstine. Det tager kun 4
+            minutter at gå til salonen herfra.
           </p>
-          <p>Til dem af jer som kommer med tog, så tager det 7 minutter at gå fra Næstved station.</p>
+          <p>
+            Til dem af jer som kommer med tog, så tager det 7 minutter at gå fra
+            Næstved station.
+          </p>
         </div>
       </div>
     </section>
@@ -126,13 +132,23 @@ import PopUp from "../components/PopUp.astro";
       <h1>UNDERVISNING</h1>
       <div class="undervisning">
         <div class="right">
-      <p>Er du uddannet frisør og vil lære at farve hår som en pro? Jeg tilbyder små, hyggelige farvekurser med plads til fordybelse og god stemning, hvor du både lærer nye teknikker og får plads til at fordybe dig i dit håndværk i en afslappet og uformel atmosfære. Jeg deler mine bedste tips og tricks – og sørger for, at du går hjem med både ny viden og inspiration.</p>
-      <a href="/undervisning"
-        ><Button class="button_green" buttontext="Læs mere" /></a
-      >
-    </div>
-      <img src="../img/undervisning_forside.webp" alt="undervisningsbillede" />
-    </div>
+          <p>
+            Er du uddannet frisør og vil lære at farve hår som en pro? Jeg
+            tilbyder små, hyggelige farvekurser med plads til fordybelse og god
+            stemning, hvor du både lærer nye teknikker og får plads til at
+            fordybe dig i dit håndværk i en afslappet og uformel atmosfære. Jeg
+            deler mine bedste tips og tricks – og sørger for, at du går hjem med
+            både ny viden og inspiration.
+          </p>
+          <a href="/undervisning"
+            ><Button class="button_green" buttontext="Læs mere" /></a
+          >
+        </div>
+        <img
+          src="../img/undervisning_forside.webp"
+          alt="undervisningsbillede"
+        />
+      </div>
     </section>
     <section>
       <h1>FØLG MIG HER</h1>
@@ -141,7 +157,11 @@ import PopUp from "../components/PopUp.astro";
     </section>
     <section class="produkter">
       <h1>PRODUKTER</h1>
-      <p>Som frisør går jeg meget op i at bruge produkter af høj kvalitet, men som samtidig tager hensyn til dig og miljøet. I salonen har du mulighed til at købe produkterne med hjem. Se mit udvalg af økologiske produkter her!
+      <p>
+        Som frisør går jeg meget op i at bruge produkter af høj kvalitet, men
+        som samtidig tager hensyn til dig og miljøet. I salonen har du mulighed
+        til at købe produkterne med hjem. Se mit udvalg af økologiske produkter
+        her!
       </p>
       <a href="/products/"
         ><Button class="button_green" buttontext="Se alle produkter" /></a
@@ -159,7 +179,6 @@ import PopUp from "../components/PopUp.astro";
 </MainLayout>
 
 <style>
-
   /* OBS KODE HVIS VI ENDER MED LOTTIEFILE .lottie {
   display: flex;
   position: relative;
@@ -198,18 +217,24 @@ import PopUp from "../components/PopUp.astro";
     padding-bottom: 2rem;
   }
 
-  #lokation, .kundeanmeldelser, #moed_gaia, #undervisning, .produkter, #bestil_tid {
-border: 3px solid var(--secondary);
-border-radius: 30px;
-background-color: var(--primary);
+  #lokation,
+  .kundeanmeldelser,
+  #moed_gaia,
+  #undervisning,
+  .produkter,
+  #bestil_tid {
+    border: 3px solid var(--secondary);
+    border-radius: 30px;
+    background-color: var(--primary);
   }
-  .moed_gaia img, .undervisning img {
-      max-width: 80%;
-    }
+  .moed_gaia img,
+  .undervisning img {
+    max-width: 80%;
+  }
   .lokation img {
     width: 100%;
   }
-  
+
   .citat {
     font-family: var(--fontcitat);
   }
@@ -268,12 +293,12 @@ background-color: var(--primary);
     .title_book h1 {
       font-size: 64pt;
     }
-    .moed_gaia{
+    .moed_gaia {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
     }
-   
+
     .lokation {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -339,7 +364,7 @@ background-color: var(--primary);
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
     }
-    .right{
+    .right {
       grid-column: 2/3;
       grid-row: 1/2;
     }
