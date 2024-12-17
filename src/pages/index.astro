@@ -363,9 +363,13 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
       opacity: 1;
       display: block;
       width: 100%;
-
+      transition: transform 0.3s ease;
       height: 100%;
       object-fit: cover;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.1);
     }
 
     #img1 {
