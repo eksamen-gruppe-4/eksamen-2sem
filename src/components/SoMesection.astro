@@ -46,8 +46,11 @@
   @media (min-width: 800px) {
     .gallery {
       display: grid;
+      grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
-      gap: 1em;
+      height: auto;
+      gap: 1rem;
+      width: 100%;
       justify-items: center;
       align-items: center;
       margin: 0 auto;
