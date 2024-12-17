@@ -60,9 +60,10 @@ html {
 main {
   background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
   width: 100%;
-  margin: 0;
   background-attachment: fixed;
+  background-size: cover;
 }
+
 body {
   background-color: var(--primary);
   text-align: center;
