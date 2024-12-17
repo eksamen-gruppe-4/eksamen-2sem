@@ -1,11 +1,11 @@
 ---
-const { buttontext } = Astro.props;
+const { buttontext, filter } = Astro.props;
 const { class: className } = Astro.props;
 ---
 
 <!--Katinka --><!--HUSK MOBILE FIRST! -->
-<div class="button_div">
-  <button class={className} type="button">{buttontext}</button>
+<div class="button_div" >
+  <button class={className} type="button" data-filter={filter}>{buttontext} </button>
 </div>
 
 <style>

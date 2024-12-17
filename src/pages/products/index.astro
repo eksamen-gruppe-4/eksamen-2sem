@@ -14,8 +14,31 @@ const products = await fetch(
   }
 ).then((res) => res.json());
 
-let currentCategory = "Alle";
-//let filteredProducts = products;
+/* //vælg alle cards
+const kort = document.querySelectorAll(".card");
+//vælg alle filterknapper
+const knapper = document.querySelectorAll("button");
+//sæt click eventlistener på alle knapper som kalder filtrer-funktionen
+knapper.forEach((knap) => knap.addEventListener("click", filtrer));
+
+function filtrer() {
+  //afmarker den aktive knap
+  document.querySelector(".active").classList.remove("active");
+  //marker den knap der blev klikket på ved at tilføje klassen "aktiv"
+  this.classList.add("active");
+
+  //loop igennem alle cards og sammenlign disses data-attribut med data-attributten på den filter-knap der blev klikket på. Hvis der er match vises kortet ved at fjerne skjul-klassen. Øvrige kort skjules
+  kort.forEach((elm) => {
+    if (
+      elm.dataset.filter == this.dataset.filter ||
+      this.dataset.filter == "alle"
+    ) {
+      elm.classList.remove("hide");
+    } else {
+      elm.classList.add("hide");
+    }
+  });
+} */
 ---
 
 <!-- Matilde -->
@@ -30,14 +53,19 @@ let currentCategory = "Alle";
       om, hvilke produkter der passer bedst til dit hår.
     </p>
     <div class="button_container">
-      <Button class="button_green" buttontext="Alle" />
-      <Button class="button_green" buttontext="Shampoo" />
-      <Button class="button_green" buttontext="Conditioner" />
-      <Button class="button_green" buttontext="Styling & Varmebeskyttelse" />
+      <Button class="button_green" buttontext="Alle" filter="Alle" />
+      <Button class="button_green" buttontext="Shampoo" filter="Shampoo" />
+      <Button
+        class="button_green"
+        buttontext="Conditioner"
+        filter="Conditioner"
+      />
+      <Button
+        class="button_green"
+        buttontext="Styling & Varmebeskyttelse"
+        filter="Styling & Varmebeskyttelse"
+      />
     </div>
-    <nav class="breadcrumb">
-      <a href="/products">Produkter</a> / <span>{currentCategory}</span>
-    </nav>
     <div class="card_container">
       {
         products.map((product) => {
@@ -98,15 +126,14 @@ let currentCategory = "Alle";
     gap: 1rem;
   }
 
-  .breadcrumb {
-    padding: 1rem;
-    text-decoration: underline;
-  }
-
   .active {
     background-color: var(--secondary);
     color: var(--primary);
     border: 3px solid var(--secondary);
+  }
+
+  .hide {
+    display: none;
   }
 
   .card_container {

@@ -1,7 +1,12 @@
+---
+const { imgSrc, title, altTekst } = Astro.props;
+const { class: className } = Astro.props;
+---
+
 <!-- Matilde -->
-<div>
-  <img src="" alt="" />
+<div class={className}>
+  <img src={imgSrc} alt={altTekst} />
   <div>
-    <p></p>
+    <p>{title}</p>
   </div>
 </div>
