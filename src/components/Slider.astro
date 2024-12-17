@@ -9,7 +9,7 @@
       src="./img/kunde1.webp"
       alt="Billede"
     />
-    <div>
+    <div class="quote-text">
       <p class="citat">
         "Fantastisk oplevelse! Jeg føler mig altid velkommen, og Gaia lytter
         virkelig til, hvad jeg ønsker. Resultatet er perfekt hver gang – kan
@@ -21,38 +21,46 @@
   <button class="next-quote">
     <img class="pil" src="/svg/arrowright.svg" alt="Højre pil" />
   </button>
+
+  <div class="dots">
+    <span class="dot" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+  </div>
 </section>
 
 <style>
   section {
     position: relative;
-
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .pil {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
   }
 
   .quote {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     max-width: 700px;
     gap: 20px;
   }
 
   .billede1 {
-    max-width: 150px;
+    max-width: 120px;
     border-radius: 5px;
-    height: auto;
   }
 
   .citat {
     font-style: italic;
-    max-width: 60ch;
+    max-width: 30ch;
   }
 
   .person {
@@ -70,6 +78,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    cursor: pointer;
   }
 
   .prev-quote {
@@ -79,38 +88,89 @@
   .next-quote {
     right: 10px;
   }
+
+  .dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: var(--quinary);
+  }
+
+  /* Styling desktop */
+  @media (min-width: 800px) {
+    .quote {
+      display: flex;
+      flex-direction: row;
+      max-width: 700px;
+      gap: 20px;
+    }
+
+    .billede1 {
+      max-width: 130px;
+      border-radius: 5px;
+    }
+
+    .pil {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .prev-quote {
+      left: 5px;
+    }
+
+    .next-quote {
+      right: 5px;
+    }
+  }
 </style>
 
 <script>
   const quotes = [
     {
-      text: `  "Fantastisk oplevelse! Jeg føler mig altid velkommen, og Gaia lytter
-        virkelig til, hvad jeg ønsker. Resultatet er perfekt hver gang – kan varmt
-        anbefale hende!"`,
+      text: `"Fantastisk oplevelse! Jeg føler mig altid velkommen, og Gaia lytter virkelig til, hvad jeg ønsker. Resultatet er perfekt hver gang – kan varmt anbefale hende!"`,
       person: "Frida Taggatz Ovesen",
-      image: "../img/kunde1.webp", // Billede for første citat
+      image: "../img/kunde1.webp",
     },
     {
       text: `"Jeg er vild med mit nye look! Gaia formåede virkelig at forstå, hvad jeg ønskede, og resultatet er endnu bedre, end jeg havde håbet på."`,
       person: "Jeanette Stockel",
-      image: "../img/kunde1.webp", // Billede for andet citat
+      image: "../img/kunde1.webp",
     },
   ];
 
   let currentIndex = 0;
   const currentQuote = document.getElementById("current-quote");
   const quoteImage = document.getElementById("quote-image");
+  const dots = document.querySelectorAll(".dot");
 
   function updateQuote(index) {
     const { text, person, image } = quotes[index];
 
-    // Find og opdater elementerne
     const citatElement = currentQuote.querySelector(".citat");
     const personElement = currentQuote.querySelector(".person");
 
     citatElement.textContent = text;
     personElement.textContent = person;
-    quoteImage.src = image; // Opdaterer billedet
+    quoteImage.src = image;
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
   }
 
   document.querySelector(".prev-quote").addEventListener("click", () => {
@@ -121,6 +181,13 @@
   document.querySelector(".next-quote").addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % quotes.length;
     updateQuote(currentIndex);
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", (e) => {
+      currentIndex = parseInt(e.target.dataset.index);
+      updateQuote(currentIndex);
+    });
   });
 
   // Initial opdatering af citat og billede
