@@ -1,19 +1,19 @@
 <section class="container">
   <div class="gallery">
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
-      <img class="reel" src="./img/some1.png" alt="Billede 1" />
+      <video class="reel" src="./img/blonding.MOV" autoplay muted loop></video>
     </a>
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
-      <img class="billede2" src="./img/some5.png" alt="Billede 2" />
+      <img class="billede1" src="./img/some5.png" alt="Billede 2" />
     </a>
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
-      <img class="billede1" src="./img/some2.png" alt="Billede 3" />
+      <img class="billede2" src="./img/some2.png" alt="Billede 3" />
     </a>
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
-      <img class="billede2" src="./img/some3.png" alt="Billede 4" />
+      <img class="billede3" src="./img/some3.png" alt="Billede 4" />
     </a>
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
-      <img class="billede1" src="./img/some4.png" alt="Billede 5" />
+      <img class="billede4" src="./img/some4.png" alt="Billede 5" />
     </a>
   </div>
 </section>
@@ -25,21 +25,24 @@
     align-items: center;
   }
 
-  .gallery {
-    justify-items: center;
-  }
-
-  .gallery img {
+  .gallery img,
+  .gallery video {
+    margin-bottom: 1em;
+    width: 100%; /* Tilpas billeder og video til rammen */
+    height: auto;
     border: 2px solid var(--secondary);
     transition: transform 0.3s ease;
-    margin-top: 2em;
+    border-radius: 1em;
   }
 
-  .gallery img:hover {
-    transform: scale(1.1);
+  .gallery {
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
-  /*Styling desktop */
+  /* Styling til desktop */
   @media (min-width: 800px) {
     .gallery {
       display: grid;
@@ -51,14 +54,39 @@
       max-width: 100%;
     }
 
+    .gallery img:hover,
+    .gallery video:hover {
+      transform: scale(1.1); /* Zoom-effekt ved hover */
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
     .reel {
-      grid-row: 1 / span 2;
       grid-column: 1;
+      grid-row: 1 / span 2;
     }
 
     .billede1 {
       grid-row: 2;
       grid-column: 2;
+    }
+
+    .billede2 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .billede3 {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+    .billede4 {
+      grid-column: 3;
+      grid-row: 2;
     }
   }
 </style>
