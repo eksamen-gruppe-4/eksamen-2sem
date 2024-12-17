@@ -7,10 +7,10 @@
       <img class="billede2" src="./img/some5.png" alt="Billede 2" />
     </a>
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
-      <img class="billede1" src="./img/some2.png" alt="Billede 3" />
+      <img class="billede2" src="./img/some2.png" alt="Billede 3" />
     </a>
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
-      <img class="billede2" src="./img/some3.png" alt="Billede 4" />
+      <img class="billede1" src="./img/some3.png" alt="Billede 4" />
     </a>
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
       <img class="billede1" src="./img/some4.png" alt="Billede 5" />
@@ -53,12 +53,17 @@
 
     .reel {
       grid-row: 1 / span 2;
-      grid-column: 1;
     }
 
     .billede1 {
-      grid-row: 2; /* Starter i anden række */
-      grid-column: 2; /* Placeres i anden kolonne */
+      display: grid;
+      grid-row: 3;
+      grid-column: 2;
+    }
+
+    .billede2 {
+      grid-row: 3;
+      grid-column: 2;
     }
   }
 </style>
