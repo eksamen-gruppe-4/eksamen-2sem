@@ -2,6 +2,7 @@
 //@ts-nocheck
 import MainLayout from "../../layouts/MainLayout.astro";
 import Button from "../../components/Button.astro";
+import Bottom_arrow from "../../components/Bottom_arrow.astro";
 //const { product } = Astro.props;
 
 export async function getStaticPaths() {
@@ -62,6 +63,9 @@ console.log(myData); // product.name, product.image osv.
         </div>
       </div>
     </div>
+    <section>
+      <Bottom_arrow />
+    </section>
   </main>
 </MainLayout>
 
