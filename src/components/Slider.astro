@@ -75,18 +75,18 @@
     background: transparent;
     border: none;
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
   }
 
   .prev-quote {
-    left: -80px;
+    left: 10px;
   }
 
   .next-quote {
-    right: -80px;
+    right: 10px;
   }
 
   .dots {
@@ -107,13 +107,13 @@
     background-color: var(--quinary);
   }
 
-  /*Styling desktop */
+  /* Styling desktop */
   @media (min-width: 800px) {
     .quote {
       display: flex;
       flex-direction: row;
       max-width: 700px;
-      gap: px;
+      gap: 20px;
     }
 
     .billede1 {
@@ -125,6 +125,16 @@
       width: 30px;
       height: 30px;
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .prev-quote {
+      left: 5px;
+    }
+
+    .next-quote {
+      right: 5px;
     }
   }
 </style>
