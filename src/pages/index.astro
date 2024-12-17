@@ -364,7 +364,7 @@ import Slider from "../components/Slider.astro";
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, auto);
+      grid-template-rows: repeat(2, 1fr);
       gap: 1rem;
       width: 100%;
       height: auto;
@@ -376,14 +376,16 @@ import Slider from "../components/Slider.astro";
       display: block;
       width: 100%;
       height: auto;
+      height: 100%; /* Tilpas billedets højde til rækkerne */
+      object-fit: cover;
     }
 
     #img1 {
       grid-column: 1 / 2;
       grid-row: span 2;
       object-fit: cover;
-      height: 400px;
-      width: 250px;
+      /* height: 400px;
+      width: 250px; */
     }
 
     #img2 {
@@ -399,8 +401,8 @@ import Slider from "../components/Slider.astro";
     #img4 {
       grid-column: 3 / 4;
       grid-row: span 2;
-      height: 400px;
-      width: 250px;
+      /* height: 400px;
+      width: 250px; */
     }
 
     #img5 {
@@ -436,6 +438,7 @@ import Slider from "../components/Slider.astro";
 
 <script>
   /*galleri*/
+
   if (window.innerWidth < 800) {
     let currentImageIndex = 0;
     const images = document.querySelectorAll(".gallery-item");
@@ -458,6 +461,7 @@ import Slider from "../components/Slider.astro";
     // Initialiser galleriet ved at vise det første billede
     showNextImage();
   }
+
   /*
   virker kun uden fade
   let currentImageIndex = 0;
