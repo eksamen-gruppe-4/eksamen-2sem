@@ -29,7 +29,33 @@ import Slider from "../components/Slider.astro";
       </div>
     </div>
     <h1>BEHANDLINGER OG PRISER</h1>
-    <!--Insert CardSection -->
+    <div class="card_container">
+      <Card_behandling
+        link="/behandlinger#1"
+        imgSrc="/img/cut_styling.webp"
+        altTekst="Cut & Styling"
+        title="Cut & Styling"
+      />
+      <Card_behandling
+        link="/behandlinger#2"
+        imgSrc="/img/color_behandling.webp"
+        altTekst="Color Behandling"
+        title="Color Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#3"
+        imgSrc="/img/blonding_behandling.webp"
+        altTekt="Blonding Behandling"
+        title="Blonding Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#4"
+        imgSrc="/img/brows_lashes.webp"
+        altTekst="Brows & Lashes"
+        title="Brows & Lashes"
+      />
+    </div>
+
     <section>
       <div class="kundeanmeldelser">
         <h1>LÆS HVAD KUNDERNE SIGER</h1>
@@ -209,7 +235,7 @@ import Slider from "../components/Slider.astro";
     <section id="bestil_tid">
       <Formular />
     </section>
-    <section>
+    <section class="arrow_container">
       <a href="#top" class="bottom-arrow">
         <img src="../svg/arrow-up.svg" alt="Pil Op" />
       </a>
@@ -309,6 +335,11 @@ import Slider from "../components/Slider.astro";
     /* overflow: hidden; */
   }
 
+  .arrow_container {
+    display: grid;
+    justify-content: center;
+  }
+
   /* Første billede vises som standard */
   .gallery-item:first-child {
     opacity: 1;
@@ -333,8 +364,13 @@ import Slider from "../components/Slider.astro";
   display: block;  
 }/*
 
+
   /*Styling desktop */
   @media (min-width: 800px) {
+    .card_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
     .title_book h1 {
       font-size: 64pt;
     }
