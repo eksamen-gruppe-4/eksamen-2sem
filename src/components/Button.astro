@@ -1,10 +1,9 @@
 ---
 const { buttontext } = Astro.props;
-const {class: className} = Astro.props;
+const { class: className } = Astro.props;
 ---
-<!--Katinka -->
-<!--HUSK MOBILE FIRST! -->
 
+<!--Katinka --><!--HUSK MOBILE FIRST! -->
 <div class="button_div">
   <button class={className} type="button">{buttontext}</button>
 </div>
@@ -14,7 +13,8 @@ const {class: className} = Astro.props;
     display: flex;
     justify-content: center;
   }
-  .button_green, .button_orange {
+  .button_green,
+  .button_orange {
     width: 160px;
     height: 50px;
     font-size: 14px;
@@ -26,17 +26,18 @@ const {class: className} = Astro.props;
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    }
+    transition: all 0.5s ease;
+  }
   /*Orange knap*/
   .button_orange {
     background-color: var(--tertiary);
-    border: 3px solid #B05215;
+    border: 3px solid #b05215;
     color: var(--primary);
   }
   .button_orange:hover {
     background-color: var(--primary);
     color: var(--tertiary);
-    border: 3px solid #B05215;
+    border: 3px solid #b05215;
   }
   /*Grøn knap*/
   .button_green {
@@ -51,13 +52,11 @@ const {class: className} = Astro.props;
   }
 
   @media (min-width: 800px) {
-    .button_green, .button_orange {
+    .button_green,
+    .button_orange {
       width: 200px;
       height: 50px;
       font-size: 16px;
     }
   }
-  
 </style>
-
-
