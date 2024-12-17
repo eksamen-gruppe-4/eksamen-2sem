@@ -26,14 +26,6 @@ export async function getStaticPaths() {
   }));
 }
 
-/* const kategori = "";
-const produkt = "";
-document.querySelector(".breadcrumb").innerHTML = `
-  <a href="/produkter">PRODUKTER</a> / 
-  <a href="/produkter/kategori/${kategori}">${kategori}</a> / 
-  <span>${produkt}</span>
-`;
- */
 const { myData } = Astro.props;
 console.log(myData); // product.name, product.image osv.
 ---
@@ -41,9 +33,12 @@ console.log(myData); // product.name, product.image osv.
 <!-- Matilde -->
 <MainLayout>
   <main>
-    <p>Produkter / {myData.category} / {myData.product_name}</p>
+    <div class="breadcrumb">
+      <a href="/products">Produkter&nbsp;/&nbsp;</a>
+      <p>{myData.category}&nbsp;/&nbsp;</p>
+      <p>{myData.product_name}</p>
+    </div>
     <div class="border">
-      <!--     <nav class="breadcrumb"></nav> -->
       <div class="product_container">
         <div>
           <img src={"/img/products/" + myData.img} alt="Produkt billede" />
@@ -100,6 +95,11 @@ console.log(myData); // product.name, product.image osv.
 
   main {
     margin: 5rem auto;
+  }
+
+  .breadcrumb {
+    display: flex;
+    text-decoration: underline;
   }
 
   .border {

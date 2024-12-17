@@ -37,7 +37,7 @@ const products = await fetch(
       <Button
         class="button_green"
         buttontext="Styling & Varmebeskyttelse"
-        filter="StylingVarmebeskyttende"
+        filter="Styling"
       />
     </div>
     <div class="card_container">
@@ -130,25 +130,6 @@ const products = await fetch(
   const knapper = document.querySelectorAll("button");
   //sæt click eventlistener på alle knapper som kalder filtrer-funktionen
   knapper.forEach((knap) => knap.addEventListener("click", filtrer));
-  /* 
-  function filtrer() {
-    //afmarker den aktive knap
-    document.querySelector(".active").classList.remove("active");
-    //marker den knap der blev klikket på ved at tilføje klassen "aktiv"
-    this.classList.add("active");
-
-    //loop igennem alle cards og sammenlign disses data-attribut med data-attributten på den filter-knap der blev klikket på. Hvis der er match vises kortet ved at fjerne skjul-klassen. Øvrige kort skjules
-    kort.forEach((elm) => {
-      if (
-        elm.dataset.filter == this.dataset.filter ||
-        this.dataset.filter == "Alle"
-      ) {
-        elm.classList.remove("hide");
-      } else {
-        elm.classList.add("hide");
-      }
-    });
-  } */
 
   function filtrer() {
     // Find den nuværende aktive knap, hvis der er en
@@ -163,6 +144,7 @@ const products = await fetch(
     // Loop igennem alle cards og sammenlign data-attributter
     kort.forEach((elm) => {
       if (
+        // @ts-ignore
         elm.dataset.filter == this.dataset.filter ||
         this.dataset.filter == "Alle"
       ) {

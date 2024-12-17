@@ -4,8 +4,10 @@ const { class: className } = Astro.props;
 ---
 
 <!--Katinka --><!--HUSK MOBILE FIRST! -->
-<div class="button_div" >
-  <button class={className} type="button" data-filter={filter}>{buttontext} </button>
+<div class="button_div">
+  <button class={className} type="button" data-filter={filter}
+    >{buttontext}
+  </button>
 </div>
 
 <style>
@@ -61,11 +63,7 @@ const { class: className } = Astro.props;
   @media (min-width: 800px) {
     .button_green,
     .button_orange {
-<<<<<<< HEAD
-      width: 200px;
-=======
       min-width: 160px;
->>>>>>> 2868c32c71aa0266de5a1e9118dca2401575836e
       height: 50px;
       font-size: 16px;
     }
