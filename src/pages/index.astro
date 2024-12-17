@@ -7,6 +7,7 @@ import Card_behandling from "../components/Card_behandling.astro";
 import PopUp from "../components/PopUp.astro";
 import SoMesection from "../components/SoMesection.astro";
 import Slider from "../components/Slider.astro";
+import Bottom_arrow from "../components/Bottom_arrow.astro";
 ---
 
 <!--OBS MOBILE FIRST!!! -->
@@ -145,6 +146,8 @@ import Slider from "../components/Slider.astro";
             undtagelser, men prøv at lade mig det vide i så god tid som muligt,
             så jeg kan tilbyde tiden til en anden kunde.
           </p>
+        </div>
+        <div class="klausul">
           <h3>Tillægsklausul: Ved forsinkelse</h3>
           <p>
             Hos Hair Creations by Gaia forstår jeg vigtigheden af punktlighed
@@ -212,9 +215,7 @@ import Slider from "../components/Slider.astro";
       <Formular />
     </section>
     <section>
-      <a href="#top" class="bottom-arrow">
-        <img src="../svg/arrow-up.svg" alt="Pil Op" />
-      </a>
+      <Bottom_arrow />
     </section>
   </main>
 </MainLayout>
@@ -277,8 +278,9 @@ import Slider from "../components/Slider.astro";
   .lokation img {
     width: 100%;
   }
-  .lokation h3,
-  .afbud h3 {
+  .lokation p,
+  .afbud p,
+  .klausul p {
     margin-top: 1rem;
   }
   .citat {
@@ -318,26 +320,6 @@ import Slider from "../components/Slider.astro";
     opacity: 1; /* Første billede vises som standard */
   }
 
-  /* virker kun uden fade
-  .gallery {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.gallery-item {
-  width: 100%;
-  height: auto;
-  display: none;
-}
-
-.gallery-item:first-child {
-  display: block;  
-}/*
-
   /*Styling desktop */
   @media (min-width: 800px) {
     .title_book h1 {
@@ -353,12 +335,13 @@ import Slider from "../components/Slider.astro";
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+      gap: 1rem;
     }
     .parkeringsinfo {
       grid-column: 1/2;
       grid-row: 1/2;
     }
-    .afbud {
+    .klausul {
       grid-column: 2/3;
       grid-row: auto;
     }
@@ -380,8 +363,8 @@ import Slider from "../components/Slider.astro";
       opacity: 1;
       display: block;
       width: 100%;
-      height: auto;
-      height: 100%; /* Tilpas billedets højde til rækkerne */
+
+      height: 100%;
       object-fit: cover;
     }
 
@@ -389,8 +372,6 @@ import Slider from "../components/Slider.astro";
       grid-column: 1 / 2;
       grid-row: span 2;
       object-fit: cover;
-      /* height: 400px;
-      width: 250px; */
     }
 
     #img2 {
@@ -406,8 +387,6 @@ import Slider from "../components/Slider.astro";
     #img4 {
       grid-column: 3 / 4;
       grid-row: span 2;
-      /* height: 400px;
-      width: 250px; */
     }
 
     #img5 {
@@ -429,20 +408,12 @@ import Slider from "../components/Slider.astro";
       grid-column: 2/3;
       grid-row: 1/2;
     }
-    .bottom-arrow {
-      display: grid;
-      justify-content: center;
-    }
-    .bottom-arrow img {
-      width: 70px;
-      height: auto;
-      transition: all 0.3s ease;
-    }
   }
 </style>
 
 <script>
-  /*galleri*/
+  /*galleri
+  DET GØR IKKE NOGET AT DEN SIGER DET DER PROPERTY STYLE DOES NOT EXIST ON TYPE ELEMENT*/
 
   if (window.innerWidth < 800) {
     let currentImageIndex = 0;
@@ -466,28 +437,4 @@ import Slider from "../components/Slider.astro";
     // Initialiser galleriet ved at vise det første billede
     showNextImage();
   }
-
-  /*
-  virker kun uden fade
-  let currentImageIndex = 0;
-const images = document.querySelectorAll('.gallery-item');
-
-// Function to show the next image
-function showNextImage() {
-  // Hide the current image
-  images[currentImageIndex].style.display = 'none';
-
-  // Update the index to the next image, or loop back to the first image
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-
-  // Show the next image
-  images[currentImageIndex].style.display = 'block';
-}
-
-// Set interval to change image every 6 seconds
-setInterval(showNextImage, 6000);
-
-// Initialize the gallery by showing the first image
-showNextImage();
-*/
 </script>

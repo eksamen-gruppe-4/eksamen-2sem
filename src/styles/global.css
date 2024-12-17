@@ -101,9 +101,6 @@ li {
   max-width: 65ch;
   line-height: 14pt;
 }
-p {
-  margin-top: 1rem;
-}
 
 footer p {
   font-size: var(--fontsize1);
