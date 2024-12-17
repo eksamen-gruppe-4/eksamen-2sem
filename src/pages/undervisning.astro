@@ -76,11 +76,27 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
     background-color: var(--primary);
     margin: 4rem;
   }
+
+  section {
+    padding: 3rem;
+  }
+  p {
+    padding-bottom: 2rem;
+  }
+
+  h3 {
+    padding-top: 0.5rem;
+  }
+
+  img {
+    margin-top: 2rem;
+  }
   @media (min-width: 800px) {
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+      gap: 2rem;
     }
     .right {
       grid-column: 2/3;

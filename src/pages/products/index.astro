@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import Button from "../../components/Button.astro";
 import Card_product from "../../components/Card_product.astro";
+import Bottom_arrow from "../../components/Bottom_arrow.astro";
 
 const products = await fetch(
   "https://eiritvqzdghcofdqqljs.supabase.co/rest/v1/products",
@@ -47,6 +48,7 @@ const products = await fetch(
         })
       }
     </div>
+    <Bottom_arrow />
   </main>
 </MainLayout>
 
@@ -116,7 +118,7 @@ const products = await fetch(
     }
   }
   @media (min-width: 800px) {
-    div {
+    .card_container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }

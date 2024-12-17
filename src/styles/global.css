@@ -64,6 +64,8 @@ main {
   background-size: cover;
 }
 
+
+
 body {
   background-color: var(--primary);
   text-align: center;
@@ -87,6 +89,7 @@ a {
 /**Font sizes mobile**/
 h1 {
   font-size: var(--fontsize5);
+  padding: 2rem;
 }
 h2 {
   font-size: var(--fontsize4);
@@ -116,10 +119,7 @@ main {
   /*   margin: 3rem; */
   margin: 0 auto;
 }
-section {
-  margin: 2rem;
-  padding: 2rem;
-}
+
 .kundeanmeldelser {
   padding: 2rem;
 }
@@ -175,11 +175,11 @@ li {
     /*  margin: 5rem; */
     max-width: 1200px;
   }
-  section,
+/*   section,
   .kundeanmeldelser {
     margin: 4rem;
     padding: 4rem;
-  }
+  } */
   li {
     margin-left: 1.5rem;
   }

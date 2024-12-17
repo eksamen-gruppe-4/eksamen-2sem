@@ -1,41 +1,85 @@
 ---
 import Button from "./Button.astro";
 ---
+
 <!--MOBILE FIRST!!! Katinka -->
 <h1>BOOK TID</h1>
-<form>
+
+<div class="form_container">
+  <div class="tekst_container">
+    <p>Ønsker du at bestille tid eller har du nogle spørgsmål?</p>
+    <p>
+      For mig er det vigtigt at vide lidt mere om dig og dine ønsker, for at
+      sikre at jeg sætter nok tid af til at opfylde din hår-drøm :)
+    </p>
+    <p>Brug venligst mit kontaktformular, så finder vi en tid som passer.</p>
+    <p>
+      Kærlig hilsen,<br />
+      Gaia
+    </p>
+    <!--     <p>
+      Ønsker du at bestille tid eller har du nogle spørgsmål?<br />
+      For mig er det vigtigt at vide lidt mere om dig og dine ønsker, for at sikre
+      at jeg sætter nok tid af til at opfylde din hår-drøm :)<br />
+      Brug venligst mit kontaktformular, så finder vi en tid som passer.<br />
+      Jeg ser frem til at høre fra dig!<br />
+      Kærlig hilsen,<br />
+      Gaia
+    </p> -->
+  </div>
+  <div>
+    <h2>KONTAKTFORMULAR</h2>
     <div>
-    <p>Ønsker du at bestille tid eller har du nogle spørgsmål?<br>
-      For mig er det vigtigt at vide lidt mere om dig og dine ønsker, for at sikre at jeg sætter nok tid af til at opfylde din hår-drøm :)<br>
-      Brug venligst mit kontaktformular, så finder vi en tid som passer.<br>
-      Jeg ser frem til at høre fra dig!<br>
-      Kærlig hilsen,<br>
-      Gaia</p>
+      <form>
+        <input type="text" placeholder="Udfyld navn" name="navn" required />
+        <input type="email" placeholder="Udfyld e-mail" name="email" required />
+        <input type="text" placeholder="Udfyld tlf. nr." name="tlf" required />
+        <input
+          type="text"
+          placeholder="Min henvendelse vedrører"
+          name="text"
+          required
+        />
+        <a href=""><Button class="button_orange" buttontext="Send" /></a>
+      </form>
     </div>
-    <div>
-      <h2>KONTAKTFORMULAR</h2>
-<div>
-<input type="text" placeholder="Udfyld navn" name="navn" required>
-<input type="email" placeholder="Udfyld e-mail" name="email" required>
-<input type="text" placeholder="Udfyld tlf. nr." name="tlf" required>
-<input type="text" placeholder="Min henvendelse vedrører" name="text" required>
-<a href=""><Button class="button_orange" buttontext="Send"/></a>
+  </div>
 </div>
-</div>
-</form>
 
 <style>
-input {
+  input {
     width: 100%;
-    padding: .6rem;
-    margin: .3rem;
+    padding: 0.6rem;
+    margin: 0.3rem;
     border-radius: 30px;
-    /* OBS finde kode til at gøre border lysegrå hele vejen rundt */
-}
-@media (min-width: 800px) {
-form {
+    border: 1px solid #d3d3d3;
+    vertical-align: top;
+  }
+
+  form input:last-of-type {
+    height: 200px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    padding-bottom: 2rem;
+  }
+
+  br {
+    padding-bottom: 3rem;
+  }
+
+  @media (min-width: 800px) {
+    .tekst_container {
+      margin-top: 2rem;
+    }
+
+    .form_container {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-}
+  }
 </style>
