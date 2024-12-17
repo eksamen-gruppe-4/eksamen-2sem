@@ -57,6 +57,13 @@ html {
   --fontsize8: 54pt;
 }
 /**Fælles stylede tags**/
+main {
+  background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
   background-color: var(--primary);
   text-align: center;
