@@ -4,8 +4,10 @@ import Button from "../components/Button.astro";
 import Formular from "../components/Formular.astro";
 import SoMeIcons from "../components/SoMeIcons.astro";
 import Card_behandling from "../components/Card_behandling.astro";
+import PopUp from "../components/PopUp.astro";
 import SoMesection from "../components/SoMesection.astro";
 import Slider from "../components/Slider.astro";
+import Bottom_arrow from "../components/Bottom_arrow.astro";
 ---
 
 <!--OBS MOBILE FIRST!!! -->
@@ -18,8 +20,7 @@ import Slider from "../components/Slider.astro";
     </dotlottie-player>
   </div> -->
       <div class="hero_img">
-        <img src="../hero_dark-kopi.png" alt="hero" />
-        <!--OBS HUSK AT REDIGERE IMG FORMAT -->
+        <img src="../img/herosection.webp" alt="hero" />
       </div>
       <div class="title_book">
         <h1>Hair Creations by Gaia</h1>
@@ -29,67 +30,208 @@ import Slider from "../components/Slider.astro";
       </div>
     </div>
     <h1>BEHANDLINGER OG PRISER</h1>
-    <!--Insert CardSection -->
+    <div class="card_container">
+      <Card_behandling
+        link="/behandlinger#1"
+        imgSrc="/img/cut_styling.webp"
+        altTekst="Cut & Styling"
+        title="Cut & Styling"
+      />
+      <Card_behandling
+        link="/behandlinger#2"
+        imgSrc="/img/color_behandling.webp"
+        altTekst="Color Behandling"
+        title="Color Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#3"
+        imgSrc="/img/blonding_behandling.webp"
+        altTekt="Blonding Behandling"
+        title="Blonding Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#4"
+        imgSrc="/img/brows_lashes.webp"
+        altTekst="Brows & Lashes"
+        title="Brows & Lashes"
+      />
+    </div>
+
     <section>
       <div class="kundeanmeldelser">
         <h1>LÆS HVAD KUNDERNE SIGER</h1>
         <Slider />
       </div>
+      <PopUp />
     </section>
     <section>
+      <!-- <h1>GALLERI</h1>
+      <div class="grid-1-1-1-1">
+        <img class="img1" src="../img/galleri1.webp" alt="gaia" />
+        <img class="img2" src="../img/galleri2.webp" alt="setup" />
+        <img class="img3" src="../img/galleri3.webp" alt="hårvask" />
+        <img class="img4" src="../img/galleri4.webp" alt="hår" />
+        <img class="img5" src="../img/galleri5.webp" alt="hår" />
+        <img class="img6" src="../img/galleri6.webp" alt="gaia" />
+      </div> -->
+
       <h1>GALLERI</h1>
-      <!--Insert Gallery -->
+      <div class="gallery-container">
+        <div class="gallery">
+          <img
+            id="img1"
+            class="gallery-item"
+            src="../img/galleri1.webp"
+            alt="gaia"
+          />
+          <img
+            id="img2"
+            class="gallery-item"
+            src="../img/galleri2.webp"
+            alt="setup"
+          />
+          <img
+            id="img3"
+            class="gallery-item"
+            src="../img/galleri3.webp"
+            alt="hårvask"
+          />
+          <img
+            id="img4"
+            class="gallery-item"
+            src="../img/galleri4.webp"
+            alt="hår"
+          />
+          <img
+            id="img5"
+            class="gallery-item"
+            src="../img/galleri5.webp"
+            alt="hår"
+          />
+          <img
+            id="img6"
+            class="gallery-item"
+            src="../img/galleri6.webp"
+            alt="gaia"
+          />
+        </div>
+      </div>
     </section>
-    <section>
+    <section id="moed_gaia">
       <h1>MØD GAIA</h1>
-      <img src="" alt="portrætbillede" />
-      <p>
-        Tekst om Gaia og hendes vision. Lorem ipsum tekst LorLorem ipsum tekst
-        Lorem ipsum tekstLorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
-        Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
-      </p>
+      <div class="moed_gaia">
+        <img src="../img/portrait.webp" alt="portrætbillede" />
+        <p>
+          Hair Creations by Gaia er en moderne salon, der specialiserer sig i
+          farvebehandlinger og klip til kvinder i alderen 14-35 år.<br />
+          Mit fokus er at skabe en personlig og afslappet oplevelse, hvor der er
+          god tid til at forstå kundens ønsker og sikre fuld tilfredshed med resultatet.<br
+          />
+          Jeg tilbyder en rolig atmosfære med kaffe, lidt at spise og en smuk styling
+          som afslutning.<br />
+          Jeg tilbyr også undervisning for frisørelever og professionelle, der ønsker
+          at forbedre deres farveteknikker og hente ny inspiration.
+        </p>
+      </div>
     </section>
     <section id="lokation">
-      <h1>HER FINDER DU SALONEN</h1>
+      <h1>PRAKTISK INFO</h1>
       <div class="lokation">
         <a
           class="map_img"
           href="https://www.google.com/maps/place/Ramsherred+23D,+4700+N%C3%A6stved/@55.2308439,11.758616,17z/data=!3m1!4b1!4m6!3m5!1s0x4652be86f2da4dd3:0x90d213edea249959!8m2!3d55.2308439!4d11.7611909!16s%2Fg%2F11nnkpp50m?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D"
-          ><img src="../img/maps.webp" alt="googlemaps" /></a
+          target="_blank"><img src="../img/maps.webp" alt="googlemaps" /></a
         >
         <div class="parkeringsinfo">
-          <h2>Parkeringsinformation</h2>
+          <p>Ramsherred 23D, 4700 Næstved</p>
+          <h3>Parkeringsinformation</h3>
           <p>
-            Lorem ipsum tekst Lorem ipsum tekstLorem ipsum tekst Lorem ipsum
-            tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekstLorem
-            ipsum tekst Lorem ipsum tekst Lorem ipsum tekst Lorem ipsum tekst
+            Til dem af jer som kommer i bil, så er der ubegrænset parkering på
+            parkeringspladsen nedenfor MENY og Hotel Kirstine. Det tager kun 4
+            minutter at gå til salonen herfra. Til dem af jer som kommer i bil,
+            så er der ubegrænset parkering på parkeringspladsen nedenfor MENY og
+            Hotel Kirstine. Det tager kun 4 minutter at gå til salonen herfra.
+          </p>
+          <p>
+            Til dem af jer som kommer med tog, så tager det 7 minutter at gå fra
+            Næstved station.
+          </p>
+        </div>
+        <div class="afbud">
+          <h3>Afbudspolitik</h3>
+          <p>
+            Når I booker en tid til en behandling, er det vigtigt at i aflyser
+            tiden minimum 24 timer inden. Skulle du aflyse tiden med kortere
+            varsel end 24 timer eller udeblive helt, vil jeg forbeholde mig
+            retten til at afslå at lave en ny tid med dig hvis min
+            mavefornemmelse siger mig at den korte varsel om aflysning eller
+            udeblivelse kunne gentage sig i fremtiden.
+          </p>
+          <p>
+            Jeg forstår, at livet kan være uforudsigeligt, og jeg gør også gerne
+            undtagelser, men prøv at lade mig det vide i så god tid som muligt,
+            så jeg kan tilbyde tiden til en anden kunde.
+          </p>
+        </div>
+        <div class="klausul">
+          <h3>Tillægsklausul: Ved forsinkelse</h3>
+          <p>
+            Hos Hair Creations by Gaia forstår jeg vigtigheden af punktlighed
+            for at sikre en glat oplevelse for alle mine kunder. Derfor beder
+            jeg jer om at være venlige at ankomme til jeres aftalte tid ( efter
+            bedste evne :))
+          </p>
+          <p>
+            I tilfælde af forsinkelse på mere end 20 minutter forbeholder jeg
+            mig retten til at opkræve det fulde beløb for den bookede
+            behandling. Jeg vil dog gøre mit bedste for at levere den service,
+            der kan lade sig gøre inden for den resterende tid.
+          </p>
+          <p>
+            Jeg værdsætter jeres forståelse og samarbejde med hensyn til denne
+            klausul, da det hjælper med at sikre en glat drift og en positiv
+            oplevelse for alle mine kunder.
+          </p>
+          <p>
+            Tak for jeres forståelse og støtte. Jeg sætter stor pris på jer!
           </p>
         </div>
       </div>
     </section>
-    <section>
+    <section id="undervisning">
       <h1>UNDERVISNING</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur. Leo massa faucibus morbi integer
-        leo. Diam porttitor diam blandit tortor mauris et cursus. Semper nisi a
-        vitae velit velit eleifend. Id fringilla eget venenatis ut duis egestas.
-      </p>
-      <a href="/undervisning"
-        ><Button class="button_green" buttontext="Læs mere" /></a
-      >
-      <img src="" alt="undervisningsbillede" />
+      <div class="undervisning">
+        <div class="right">
+          <p>
+            Er du uddannet frisør og vil lære at farve hår som en pro? Jeg
+            tilbyder små, hyggelige farvekurser med plads til fordybelse og god
+            stemning, hvor du både lærer nye teknikker og får plads til at
+            fordybe dig i dit håndværk i en afslappet og uformel atmosfære. Jeg
+            deler mine bedste tips og tricks – og sørger for, at du går hjem med
+            både ny viden og inspiration.
+          </p>
+          <a href="/undervisning"
+            ><Button class="button_green" buttontext="Læs mere" /></a
+          >
+        </div>
+        <img
+          src="../img/undervisning_forside.webp"
+          alt="undervisningsbillede"
+        />
+      </div>
     </section>
     <section>
       <h1>FØLG MIG HER</h1>
       <SoMesection />
       <SoMeIcons />
     </section>
-    <section>
+    <section class="produkter">
       <h1>PRODUKTER</h1>
       <p>
-        Jeg går meget op i at bruge produkter af høj kvalitet, men som også
-        tager hensyn til miljøet. I salonen har du mulighed til at købe
-        produkterne med hjem. Se mit udvalg af produkter her!
+        Som frisør går jeg meget op i at bruge produkter af høj kvalitet, men
+        som samtidig tager hensyn til dig og miljøet. I salonen har du mulighed
+        til at købe produkterne med hjem. Se mit udvalg af økologiske produkter
+        her!
       </p>
       <a href="/products/"
         ><Button class="button_green" buttontext="Se alle produkter" /></a
@@ -98,33 +240,27 @@ import Slider from "../components/Slider.astro";
     <section id="bestil_tid">
       <Formular />
     </section>
+    <Bottom_arrow />
   </main>
 </MainLayout>
 
 <style>
-  main {
-    background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
-    width: 100%;
-    margin: 0;
-    background-attachment: fixed;
-  }
-  /* OBS KODE HVIS VI ENDER MED LOTTIEFILE .lottie {
-  display: flex;
-  position: relative;
-  width: 100%;
-  z-index: 0;
-  } */
   .hero_section {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: 30px;
+    margin: 1rem;
   }
   .hero_img {
     animation: zoomIn 10s infinite alternate;
     width: 100%;
     overflow: hidden;
+  }
+
+  .hero_img img {
+    filter: brightness(75%);
   }
   /*Zoom-in animation*/
   @keyframes zoomIn {
@@ -141,39 +277,221 @@ import Slider from "../components/Slider.astro";
   }
   .title_book h1 {
     color: var(--primary);
-    font-size: 40pt;
+    font-size: 32pt;
     text-transform: uppercase;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
 
   #lokation,
-  .kundeanmeldelser {
+  .kundeanmeldelser,
+  #moed_gaia,
+  #undervisning,
+  .produkter,
+  #bestil_tid {
     border: 3px solid var(--secondary);
     border-radius: 30px;
     background-color: var(--primary);
   }
+  .produkter p {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .moed_gaia img,
+  .undervisning img {
+    max-width: 100%;
+  }
+  #undervisning p {
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
   .lokation img {
     width: 100%;
+  }
+  .lokation p,
+  .afbud p,
+  .klausul p {
+    margin-top: 1rem;
   }
   .citat {
     font-family: var(--fontcitat);
   }
+
+  /*galleri*/
+
+  .gallery-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* F.eks. hele viewportens højde */
+    overflow: hidden; /* Skjuler eventuelle overlappende elementer */
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gallery-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+  }
+
+  .gallery-item:first-child {
+    opacity: 1; /* Første billede vises som standard */
+  }
+
+  @media (max-width: 799px) {
+    .card_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
   /*Styling desktop */
   @media (min-width: 800px) {
+    .hero_section {
+      margin: 3rem;
+    }
+
+    .card_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
     .title_book h1 {
       font-size: 64pt;
     }
+    .moed_gaia {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+    }
+
     .lokation {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
+      gap: 1rem;
     }
     .parkeringsinfo {
       grid-column: 1/2;
       grid-row: 1/2;
     }
+    .klausul {
+      grid-column: 2/3;
+      grid-row: auto;
+    }
     .map_img {
       grid-column: 2/3;
     }
+    /*galleri desk*/
+
+    .gallery-container {
+      height: 100vh;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
+      width: 100%;
+      height: auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      opacity: 1;
+      display: block;
+      width: 100%;
+      transition: transform 0.3s ease;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.1);
+    }
+
+    #img1 {
+      grid-column: 1 / 2;
+      grid-row: span 2;
+      object-fit: cover;
+    }
+
+    #img2 {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    #img3 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    #img4 {
+      grid-column: 3 / 4;
+      grid-row: span 2;
+    }
+
+    #img5 {
+      grid-column: 4 / 5;
+      grid-row: 1 / 2;
+    }
+
+    #img6 {
+      grid-column: 4 / 5;
+      grid-row: 2 / 3;
+    }
+
+    .undervisning {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+    .right {
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
   }
 </style>
+
+<script>
+  /*galleri
+  DET GØR IKKE NOGET AT DEN SIGER DET DER PROPERTY STYLE DOES NOT EXIST ON TYPE ELEMENT,
+  @ts-ignore er tilføjet for at den ikke siger fejl*/
+
+  if (window.innerWidth < 800) {
+    let currentImageIndex = 0;
+    const images = document.querySelectorAll(".gallery-item");
+
+    // Funktion til at vise næste billede
+    function showNextImage() {
+      // Fjern synligheden fra det nuværende billede
+      // @ts-ignore
+      images[currentImageIndex].style.opacity = 0;
+
+      // Opdater index til næste billede, eller loop tilbage til det første billede
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+
+      // Vis det næste billede med fade-effekt
+      // @ts-ignore
+      images[currentImageIndex].style.opacity = 1;
+    }
+
+    // Sæt interval for at ændre billede hver 6. sekund
+    setInterval(showNextImage, 6000);
+
+    // Initialiser galleriet ved at vise det første billede
+    showNextImage();
+  }
+</script>

@@ -166,6 +166,7 @@
 
     citatElement.textContent = text;
     personElement.textContent = person;
+    //@ts-ignore
     quoteImage.src = image;
 
     dots.forEach((dot, i) => {
@@ -185,6 +186,7 @@
 
   dots.forEach((dot) => {
     dot.addEventListener("click", (e) => {
+      //@ts-ignore
       currentIndex = parseInt(e.target.dataset.index);
       updateQuote(currentIndex);
     });

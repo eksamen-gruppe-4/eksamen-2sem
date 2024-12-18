@@ -1,0 +1,87 @@
+<div id="popup">
+  <div class="popup-box">
+    <button class="close-btn" id="closePopup">&times;</button>
+    <!--
+      &times er en HTML enhedskode (character entity code), som bruges til at vise specialtegn (x) så den ved der skal være et kryds i boksen
+    -->
+    <h2>Hey Girlies!</h2>
+    <p>
+      Hvis du tipper en veninde om min salon får I 20% på jeres næste klip <br
+      />
+      knus Gaia
+    </p>
+  </div>
+</div>
+
+<style>
+  .popup-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--quinary);
+    border: 2px solid var(--secondary);
+    border-radius: 30px;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0; /* Usynlig som standard */
+    transform: scale(0.9);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+    z-index: 1000;
+  }
+
+  /* Når popup'en vises */
+  .show .popup-box {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Luk-knap */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary);
+  }
+
+  .close-btn:hover {
+    color: var(--primary);
+  }
+  p,
+  h2 {
+    color: var(--primary);
+  }
+
+  /* Den lille pil, som gør den til en taleboble */
+  .popup-box::after {
+    content: ""; /*(tom streng). Dette betyder, at der ikke bliver tilføjet noget tekst eller andet indhold i elementet — kun de stilistiske egenskaber*/
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: var(--secondary) transparent transparent transparent; /* man skriver transparent fordi man kun skal angice favren på en ud af 4 kanter for at skabe en pil */
+  }
+</style>
+
+<script>
+  const popup = document.getElementById("popup");
+  const closeBtn = document.getElementById("closePopup");
+
+  // Funktion til at lukke popup
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  // Vis popup efter 4 sekunder
+  setTimeout(() => {
+    popup.style.display = "flex";
+    popup.classList.add("show"); // Tilføjer animationseffekten
+  }, 4000); // 10000 millisekunder = 4 sekunder
+</script>

@@ -1,7 +1,46 @@
+---
+const { link, imgSrc, title, altTekst } = Astro.props;
+const { class: className } = Astro.props;
+---
+
 <!-- Matilde -->
-<div>
-  <img src="" alt="" />
-  <div>
-    <p></p>
+<a href={link}>
+  <div class="card">
+    <img src={imgSrc} alt={altTekst} />
+    <div class="info">
+      <h3>{title}</h3>
+    </div>
   </div>
-</div>
+</a>
+
+<style>
+  img {
+    width: 240px;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 30px 30px 0px 0px;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card {
+    width: 240px;
+    margin: 2rem;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-bottom: auto;
+    text-align: center;
+  }
+
+  .info {
+    background-color: var(--secondary);
+    margin-top: -6px;
+    padding: 1.5rem;
+    height: 110px;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

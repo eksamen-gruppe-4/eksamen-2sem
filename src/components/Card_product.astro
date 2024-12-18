@@ -4,7 +4,7 @@ console.log("product", product);
 ---
 
 <!-- Matilde -->
-<div class="card">
+<div class="card" data-filter={product.category}>
   <a href={`/products/${product.slug}`}>
     <img src={"/img/products/" + product.img} alt="Billede af produkt" />
     <div class="info">
@@ -34,6 +34,7 @@ console.log("product", product);
     color: var(--quaternary);
     text-decoration: underline;
     margin-top: auto;
+    text-align: left;
   }
 
   p {
@@ -43,7 +44,8 @@ console.log("product", product);
   }
 
   img {
-    width: 100%;
+    width: 240px;
+    height: auto;
     margin-bottom: 0;
     border-radius: 30px 30px 0px 0px;
   }
@@ -51,6 +53,7 @@ console.log("product", product);
     transform: scale(1.05);
   }
 
-  @media (min-width: 800px) {
+  .hide {
+    display: none;
   }
 </style>

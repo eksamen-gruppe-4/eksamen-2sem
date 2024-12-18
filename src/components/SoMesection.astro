@@ -1,5 +1,5 @@
-<section class="container">
-  <div class="gallery">
+<section class="container1">
+  <div class="gallerysome">
     <a href="https://www.instagram.com/haircreationsbygaia/" target="_blank">
       <video class="reel" src="./img/blonding.MOV" autoplay muted loop></video>
     </a>
@@ -19,14 +19,14 @@
 </section>
 
 <style>
-  .container {
+  .container1 {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .gallery img,
-  .gallery video {
+  .gallerysome img,
+  .gallerysome video {
     margin-bottom: 1em;
     width: 100%; /* Tilpas billeder og video til rammen */
     height: auto;
@@ -35,7 +35,7 @@
     border-radius: 1em;
   }
 
-  .gallery {
+  .gallerysome {
     justify-items: center;
     align-items: center;
     margin: 0 auto;
@@ -44,10 +44,13 @@
 
   /* Styling til desktop */
   @media (min-width: 800px) {
-    .gallery {
+    .gallerysome {
       display: grid;
+      grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
-      gap: 1em;
+      height: auto;
+      gap: 1rem;
+      width: 100%;
       justify-items: center;
       align-items: center;
       margin: 0 auto;
@@ -58,10 +61,26 @@
     .gallery video:hover {
       transform: scale(1.1); /* Zoom-effekt ved hover */
     }
+    .gallerysome {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 800px;
+      margin: auto;
+    }
 
     .reel {
       grid-column: 1;
       grid-row: 1 / span 2;
+    }
+
+    .billede1,
+    .billede2,
+    .billede3,
+    .billede4 {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
     }
 
     .billede1 {

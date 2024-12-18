@@ -2,6 +2,7 @@
 //@ts-nocheck
 import MainLayout from "../../layouts/MainLayout.astro";
 import Button from "../../components/Button.astro";
+import Bottom_arrow from "../../components/Bottom_arrow.astro";
 //const { product } = Astro.props;
 
 export async function getStaticPaths() {
@@ -25,14 +26,6 @@ export async function getStaticPaths() {
   }));
 }
 
-/* const kategori = "";
-const produkt = "";
-document.querySelector(".breadcrumb").innerHTML = `
-  <a href="/produkter">PRODUKTER</a> / 
-  <a href="/produkter/kategori/${kategori}">${kategori}</a> / 
-  <span>${produkt}</span>
-`;
- */
 const { myData } = Astro.props;
 console.log(myData); // product.name, product.image osv.
 ---
@@ -40,8 +33,15 @@ console.log(myData); // product.name, product.image osv.
 <!-- Matilde -->
 <MainLayout>
   <main>
+    <div class="breadcrumb">
+      <a href="/products">
+        <img class="arrow" src="/svg/arrowleft.svg" alt="" />
+      </a>
+      <a href="/products">Produkter&nbsp;/&nbsp;</a>
+      <p>{myData.category}&nbsp;/&nbsp;</p>
+      <p>{myData.product_name}</p>
+    </div>
     <div class="border">
-      <!--     <nav class="breadcrumb"></nav> -->
       <div class="product_container">
         <div>
           <img src={"/img/products/" + myData.img} alt="Produkt billede" />
@@ -61,6 +61,9 @@ console.log(myData); // product.name, product.image osv.
         </div>
       </div>
     </div>
+    <section>
+      <Bottom_arrow />
+    </section>
   </main>
 </MainLayout>
 
@@ -97,6 +100,18 @@ console.log(myData); // product.name, product.image osv.
     margin: 5rem auto;
   }
 
+  .breadcrumb {
+    display: flex;
+    text-decoration: underline;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+  }
+
+  .arrow {
+    width: 50px;
+  }
+
   .border {
     border: 4px solid var(--secondary);
     border-radius: 50px;
@@ -107,6 +122,7 @@ console.log(myData); // product.name, product.image osv.
 
   h1 {
     margin-bottom: 1rem;
+    padding: 0;
   }
 
   p {
@@ -123,8 +139,8 @@ console.log(myData); // product.name, product.image osv.
     margin-bottom: 3rem;
   }
 
-  .bla {
-    width: 300px;
+  img {
+    width: 246px;
     height: auto;
   }
 
@@ -132,7 +148,7 @@ console.log(myData); // product.name, product.image osv.
     .product_container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 1rem;
     }
 
     .border {
@@ -141,6 +157,11 @@ console.log(myData); // product.name, product.image osv.
 
     h1 {
       text-align: left;
+    }
+
+    img {
+      width: 426px;
+      height: auto;
     }
   }
 </style>
