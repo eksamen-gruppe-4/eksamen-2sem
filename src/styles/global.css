@@ -58,7 +58,7 @@ html {
 }
 /**Fælles stylede tags**/
 main {
-  background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
+  background-image: url("../waves1.webp"); /*OBS ændre til vores egen baggrund!!*/
   width: 100%;
   background-attachment: fixed;
   background-size: cover;
@@ -178,7 +178,7 @@ li {
     /*  margin: 5rem; */
     max-width: 1200px;
   }
-/*   section,
+  /*   section,
   .kundeanmeldelser {
     margin: 4rem;
     padding: 4rem;
