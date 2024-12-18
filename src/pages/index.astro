@@ -320,10 +320,10 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
   /*galleri*/
 
   .gallery-container {
-    position: relative; /* Sikrer, at billederne forholder sig til containerens grænser */
+    position: relative;
     width: 100%;
-    height: 80vh; /* F.eks. hele viewportens højde */
-    overflow: hidden; /* Skjuler eventuelle overlappende elementer */
+    height: 80vh;
+    overflow: hidden;
   }
 
   .gallery {
@@ -336,14 +336,14 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
   }
 
   .gallery-item {
-    position: absolute; /* Holder billederne stablet */
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    object-fit: cover; /* Gør billederne responsive uden at miste proportioner */
+    object-fit: cover;
   }
 
   .gallery-item:first-child {
@@ -402,7 +402,7 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
       grid-template-rows: repeat(2, 1fr);
       gap: 1rem;
       width: 100%;
-      height: auto;
+      /* height: auto; */
     }
 
     .gallery-item {
