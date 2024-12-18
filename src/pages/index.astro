@@ -245,10 +245,6 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
 </MainLayout>
 
 <style>
-  section {
-    margin: 4rem;
-    padding: 2rem;
-  }
   .hero_section {
     display: flex;
     align-items: center;
@@ -319,7 +315,7 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
   .gallery-container {
     position: relative; /* Sikrer, at billederne forholder sig til containerens grænser */
     width: 100%;
-    height: 80vh; /* F.eks. hele viewportens højde */
+    height: 70vh; /* F.eks. hele viewportens højde */
     overflow: hidden; /* Skjuler eventuelle overlappende elementer */
   }
 
@@ -393,6 +389,10 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
       grid-column: 2/3;
     }
     /*galleri desk*/
+
+    .gallery-container {
+      height: 100vh;
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(4, 1fr);

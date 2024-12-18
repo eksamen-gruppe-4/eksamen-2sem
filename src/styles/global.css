@@ -64,7 +64,10 @@ main {
   background-size: cover;
 }
 
-
+section {
+  margin: 4rem;
+  padding: 2rem;
+}
 
 body {
   background-color: var(--primary);
