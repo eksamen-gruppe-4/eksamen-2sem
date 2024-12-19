@@ -24,16 +24,19 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
             bruge i din egen hverdag. Og ja, vi tager det i et roligt tempo,
             hvor der er plads til både nysgerrighed og faglige snakke.
           </p>
+        <ul>
           <li>
             Tid: 5-6 timer (det lyder længe, men tro mig, tiden flyver afsted).
           </li>
           <li>Pris: 1.500 kr. pr. person.</li>
+        </ul>
         </div>
         <img class="left" src="../img/undervisning2.webp" alt="billede" />
       </section>
       <section class="grid_1-1">
         <div>
           <h3>Hvad er inkluderet?</h3>
+          <ul>
           <li>
             Drikkelse: Jeg sørger for te, kaffe eller varm kakao – nok til at
             holde energien oppe hele vejen igennem.
@@ -46,6 +49,7 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
             Ekstraudstyr: Du har mulighed for at købe professionelle kamme,
             pensler og andre redskaber, der gør dit arbejde nemmere.
           </li>
+        </ul>
           <h3>Hvorfor vælge mit kursus?</h3>
           <p>
             Det her er ikke bare et kursus – det er en oplevelse, hvor du både
@@ -95,6 +99,9 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
     margin-top: 1rem;
   }
   @media (min-width: 800px) {
+    li {
+    margin-left: 3.5rem;
+  }
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;

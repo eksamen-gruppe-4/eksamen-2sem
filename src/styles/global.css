@@ -173,10 +173,17 @@ li {
   }
 
   /**Margin & padding desktop. OBS header og footer styles i egen komponent**/
+
   main {
-    /*  margin: 5rem; */
     max-width: 1200px;
   }
+  h2,
+  h3,
+  p {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
   /*   section,
   .kundeanmeldelser {
     margin: 4rem;
