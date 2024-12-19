@@ -47,17 +47,16 @@ html {
   --quaternary: #ffd2bd; /**CTA på mørk baggrund**/
   --quinary: #a9b489; /**Pop-up buble**/
   /**Font size**/
-  --fontsize1: 10pt;
-  --fontsize2: 12pt;
-  --fontsize3: 14pt;
-  --fontsize4: 18pt;
-  --fontsize5: 24pt;
-  --fontsize6: 36pt;
-  --fontsize7: 48pt;
-  --fontsize8: 54pt;
+  --fontsize1: 13px;
+  --fontsize2: 16px;
+  --fontsize3: 19px;
+  --fontsize4: 24px;
+  --fontsize5: 32px;
+  --fontsize6: 48px;
+  --fontsize7: 64px;
+  --fontsize8: 72px;
 }
 /**Fælles stylede tags**/
-
 
 section {
   margin: 4rem;
@@ -67,7 +66,7 @@ section {
 body {
   background-color: var(--primary);
   text-align: center;
-  background-image: url("../waves1.webp"); 
+  background-image: url("../waves1.webp");
   width: 100%;
   background-attachment: fixed;
   background-size: cover;
@@ -105,12 +104,12 @@ p,
 li {
   font-size: var(--fontsize2);
   max-width: 65ch;
-  line-height: 14pt;
+  line-height: 18px;
 }
 
 footer p {
   font-size: var(--fontsize1);
-  line-height: 12pt;
+  line-height: 16px;
 }
 
 img {
@@ -163,21 +162,28 @@ li {
   p,
   li {
     font-size: var(--fontsize3);
-    line-height: 16pt;
+    line-height: 20px;
   }
   p {
     text-align: left;
   }
   footer p {
     font-size: var(--fontsize2);
-    line-height: 14pt;
+    line-height: 18px;
   }
 
   /**Margin & padding desktop. OBS header og footer styles i egen komponent**/
+
   main {
-    /*  margin: 5rem; */
     max-width: 1200px;
   }
+  h2,
+  h3,
+  p {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
   /*   section,
   .kundeanmeldelser {
     margin: 4rem;
