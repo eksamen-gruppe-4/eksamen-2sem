@@ -58,10 +58,15 @@ html {
 }
 /**Fælles stylede tags**/
 main {
-  background-image: url("../waves-kopi.png"); /*OBS ændre til vores egen baggrund!!*/
+  background-image: url("../waves1.webp"); /*OBS ændre til vores egen baggrund!!*/
   width: 100%;
   background-attachment: fixed;
   background-size: cover;
+}
+
+section {
+  margin: 4rem;
+  padding: 2rem;
 }
 
 body {

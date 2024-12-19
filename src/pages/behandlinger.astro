@@ -2,11 +2,38 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Formular from "../components/Formular.astro";
 import Bottom_arrow from "../components/Bottom_arrow.astro";
+import Card_behandling from "../components/Card_behandling.astro";
 ---
 
 <MainLayout>
   <main>
     <h1>BEHANDLINGER OG PRISER</h1>
+    <div class="card_container">
+      <Card_behandling
+        link="/behandlinger#1"
+        imgSrc="/img/cut_styling.webp"
+        altTekst="Cut & Styling"
+        title="Cut & Styling"
+      />
+      <Card_behandling
+        link="/behandlinger#2"
+        imgSrc="/img/color_behandling.webp"
+        altTekst="Color Behandling"
+        title="Color Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#3"
+        imgSrc="/img/blonding_behandling.webp"
+        altTekt="Blonding Behandling"
+        title="Blonding Behandling"
+      />
+      <Card_behandling
+        link="/behandlinger#4"
+        imgSrc="/img/brows_lashes.webp"
+        altTekst="Brows & Lashes"
+        title="Brows & Lashes"
+      />
+    </div>
     <section id="1">
       <h2>CUT & STYLING</h2>
       <div class="grid_1-1">
@@ -172,9 +199,7 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
     <section id="bestil_tid">
       <Formular />
     </section>
-    <section>
-      <Bottom_arrow />
-    </section>
+    <Bottom_arrow />
   </main>
 </MainLayout>
 <style>
@@ -209,7 +234,19 @@ import Bottom_arrow from "../components/Bottom_arrow.astro";
     background-color: var(--primary);
   }
 
+  @media (max-width: 799px) {
+    .card_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+
   @media (min-width: 800px) {
+    .card_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
     .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
