@@ -64,8 +64,6 @@ main {
   background-size: cover;
 }
 
-
-
 body {
   background-color: var(--primary);
   text-align: center;
@@ -175,7 +173,7 @@ li {
     /*  margin: 5rem; */
     max-width: 1200px;
   }
-/*   section,
+  /*   section,
   .kundeanmeldelser {
     margin: 4rem;
     padding: 4rem;
