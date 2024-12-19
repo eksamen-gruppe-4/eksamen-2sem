@@ -40,8 +40,10 @@ import Button from "./Button.astro";
           name="text"
           required
         />
-        <a href=""><Button class="button_orange" buttontext="Send" /></a>
       </form>
+      <div class="orange_padding">
+        <a href=""><Button class="button_orange" buttontext="Send" /></a>
+      </div>
     </div>
   </div>
 </div>
@@ -71,7 +73,9 @@ import Button from "./Button.astro";
   br {
     padding-bottom: 3rem;
   }
-
+  .orange_padding {
+    padding-top: 2rem;
+  }
   @media (min-width: 800px) {
     .tekst_container {
       margin-top: 2rem;

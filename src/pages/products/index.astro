@@ -19,14 +19,16 @@ const products = await fetch(
 <!-- Matilde -->
 <MainLayout>
   <main>
-    <h1>PRODUKTER</h1>
-    <p>
-      Jeg tilbyder et udvalg af Angel hårplejeprodukter i min salon. Mærket er
-      kendt for sin høje kvalitet, skånsomhed og bæredygtige fokus på naturlige
-      ingredienser og genanvendelig emballage. Her kan du finde en oversigt over
-      produkterne, som du kan købe direkte i salonen. Kom forbi og få rådgivning
-      om, hvilke produkter der passer bedst til dit hår.
-    </p>
+    <section class="produkttekst">
+      <h1>PRODUKTER</h1>
+      <p>
+        Jeg tilbyder et udvalg af Angel hårplejeprodukter i min salon. Mærket er
+        kendt for sin høje kvalitet, skånsomhed og bæredygtige fokus på
+        naturlige ingredienser og genanvendelig emballage. Her kan du finde en
+        oversigt over produkterne, som du kan købe direkte i salonen. Kom forbi
+        og få rådgivning om, hvilke produkter der passer bedst til dit hår.
+      </p>
+    </section>
     <div class="button_container">
       <Button class="button_green" buttontext="Alle" filter="Alle" />
       <Button class="button_green" buttontext="Shampoo" filter="Shampoo" />
@@ -85,7 +87,12 @@ const products = await fetch(
     margin: 0 auto;
     max-width: 1200px;
   }
-
+  .produkttekst {
+    border: 3px solid var(--secondary);
+    border-radius: 30px;
+    background-color: var(--primary);
+    padding: 0;
+  }
   h1 {
     padding: 2rem;
   }
