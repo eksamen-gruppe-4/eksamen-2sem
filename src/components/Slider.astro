@@ -29,21 +29,6 @@
 </section>
 
 <style>
-  section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .pil {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-
   .quote {
     display: flex;
     flex-direction: column;
@@ -70,25 +55,6 @@
     width: 100%;
   }
 
-  .prev-quote,
-  .next-quote {
-    background: transparent;
-    border: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
-  }
-
-  .prev-quote {
-    left: 10px;
-  }
-
-  .next-quote {
-    right: 10px;
-  }
-
   .dots {
     display: flex;
     gap: 10px;
@@ -109,33 +75,98 @@
 
   /* Styling desktop */
   @media (min-width: 800px) {
+    section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
     .quote {
       display: flex;
       flex-direction: row;
       max-width: 700px;
-      gap: 20px;
+      margin-bottom: 1em;
+      margin: 0;
+    }
+
+    .prev-quote {
+      left: 10px;
+    }
+
+    .next-quote {
+      right: 10px;
     }
 
     .billede1 {
-      max-width: 130px;
+      max-width: 150px;
       border-radius: 5px;
     }
 
     .pil {
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
+    .prev-quote,
+    .next-quote {
+      background: transparent;
+      border: none;
+      position: absolute;
+      top: 36%;
+      transform: translateY(-50%);
+      z-index: 10;
       cursor: pointer;
     }
   }
 
   @media (max-width: 800px) {
+    section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .pil {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      position: absolute;
+      transform: translateY(-50%);
+    }
+    .prev-quote,
+    .next-quote {
+      background: transparent;
+      border: none;
+      position: absolute;
+      top: 26%;
+      transform: translateY(-50%);
+      z-index: 10;
+      cursor: pointer;
+    }
     .prev-quote {
-      left: 5px;
+      left: -10px;
     }
 
     .next-quote {
-      right: 5px;
+      right: 12px;
     }
+  }
+
+  section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
   }
 </style>
 
@@ -149,7 +180,7 @@
     {
       text: `"Jeg er vild med mit nye look! Gaia formåede virkelig at forstå, hvad jeg ønskede, og resultatet er endnu bedre, end jeg havde håbet på."`,
       person: "Jeanette Stockel",
-      image: "../img/kunde1.webp",
+      image: "../img/kunde2.png",
     },
   ];
 
