@@ -33,9 +33,13 @@ div {
 svg {
     width: 1.5rem;
     height: 1.5rem;
+    transition: transform 0.3s ease;
 }
 .green path{
 stroke: var(--secondary);
+}
+svg:hover {
+    transform: scale(1.05);
 }
 /**Ændrer størrelsen på icons på desktop */
 @media (min-width: 800px) {
