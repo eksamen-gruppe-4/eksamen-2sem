@@ -57,12 +57,7 @@ html {
   --fontsize8: 54pt;
 }
 /**Fælles stylede tags**/
-main {
-  background-image: url("../waves1.webp"); /*OBS ændre til vores egen baggrund!!*/
-  width: 100%;
-  background-attachment: fixed;
-  background-size: cover;
-}
+
 
 section {
   margin: 4rem;
@@ -72,6 +67,10 @@ section {
 body {
   background-color: var(--primary);
   text-align: center;
+  background-image: url("../waves1.webp"); 
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
 }
 h1,
 h2,
